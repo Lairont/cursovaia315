@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Заказ подтвержден";
+}
+
+<div style="text-align: center; padding: 3rem 2rem;">
+    <div style="background: white; padding: 3rem 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+        <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+        <h1 style="color: #1e293b; margin-bottom: 1rem;">Спасибо за заказ!</h1>
+        <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
+            Ваш заказ успешно оформлен и отправлен на обработку.
+        </p>
+
+        <div style="background: #f0f4ff; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; text-align: left;">
+            <p style="color: #1e293b; font-weight: 600; margin-bottom: 0.5rem;">
+                📧 Проверьте ваш email
+            </p>
+            <p style="color: #666; font-size: 0.95rem; margin: 0;">
+                Мы отправили на ваш email подробную информацию о заказе с номером, суммой и сроком доставки.
+            </p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <p style="margin: 0; font-weight: 600;">Что дальше?</p>
+            <p style="margin: 0.5rem 0 0 0; font-size: 0.95rem; opacity: 0.9;">
+                Наш менеджер свяжется с вами в течение часа для уточнения деталей доставки.
+            </p>
+        </div>
+
+        <p style="color: #888; font-size: 0.95rem; margin-bottom: 2rem;">
+            Номер заказа: <strong>ORD-@(DateTime.Now.Ticks % 1000000)</strong>
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+            <a href="/Product/Catalog" class="btn btn-secondary">
+                Продолжить покупки
+            </a>
+            <a href="/" class="btn btn-primary">
+                На главную
+            </a>
+        </div>
+    </div>
+
+    <div style="max-width: 600px; margin: 3rem auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #1e293b; margin-bottom: 1rem;">Нужна помощь?</h2>
+        <p style="color: #666; margin-bottom: 1rem;">
+            Если у вас есть вопросы по вашему заказу, свяжитесь с нами:
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div style="padding: 1rem; background: #f0f4ff; border-radius: 8px;">
+                <p style="font-weight: 600; color: #1e293b; margin: 0 0 0.5rem 0;">📞 Телефон</p>
+                <p style="color: #2563eb; font-weight: 600; margin: 0;">+7 (800) 123-45-67</p>
+            </div>
+            <div style="padding: 1rem; background: #f0f4ff; border-radius: 8px;">
+                <p style="font-weight: 600; color: #1e293b; margin: 0 0 0.5rem 0;">✉️ Email</p>
+                <p style="color: #2563eb; font-weight: 600; margin: 0;">info@stationerystore.ru</p>
+            </div>
+        </div>
+    </div>
+</div>

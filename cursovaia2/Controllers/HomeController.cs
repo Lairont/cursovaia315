@@ -1,0 +1,56 @@
+using cursovaia2.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+
+namespace cursovaia2.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            var categories = GetCategories();
+            var popularProducts = GetPopularProducts();
+            var viewModel = new { Categories = categories, PopularProducts = popularProducts };
+            return View(viewModel);
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private List<Category> GetCategories()
+        {
+            return new List<Category>
+            {
+                new() { Id = 1, Name = "Ручки", Icon = "✏️" },
+                new() { Id = 2, Name = "Карандаши", Icon = "📝" },
+                new() { Id = 3, Name = "Тетради", Icon = "📓" },
+                new() { Id = 4, Name = "Блокноты", Icon = "📄" },
+                new() { Id = 5, Name = "Клей и скотч", Icon = "📌" },
+                new() { Id = 6, Name = "Папки и файлы", Icon = "📂" }
+            };
+        }
+
+        private List<Product> GetPopularProducts()
+        {
+            return new List<Product>
+            {
+                new() { Id = 1, Name = "Ручка гелевая", Description = "Удобная ручка", Price = 50m },
+                new() { Id = 2, Name = "Карандаш HB", Description = "Для рисования", Price = 30m },
+                new() { Id = 3, Name = "Тетрадь 96л", Description = "Качественная бумага", Price = 150m }
+            };
+        }
+    }
+}

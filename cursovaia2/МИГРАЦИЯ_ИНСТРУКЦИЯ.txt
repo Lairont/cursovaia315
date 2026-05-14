@@ -1,0 +1,18 @@
+ИНСТРУКЦИЯ ПО МИГРАЦИИ БАЗЫ ДАННЫХ
+===================================
+
+После того как вы заполните модели в папке ModelsDb (UserDb.cs, CategoryDb.cs, ProductDb.cs), 
+выполните следующие команды в Package Manager Console (View > Other Windows > Package Manager Console):
+
+1. Создание первой миграции:
+   Add-Migration InitialCreate
+
+2. Обновление базы данных:
+   Update-Database
+
+Если нужно создать новую миграцию после изменений в моделях:
+   Add-Migration NameOfMigration
+   Update-Database
+
+Для отката последней миграции:
+   Update-Database -Migration NameOfPreviousMigration

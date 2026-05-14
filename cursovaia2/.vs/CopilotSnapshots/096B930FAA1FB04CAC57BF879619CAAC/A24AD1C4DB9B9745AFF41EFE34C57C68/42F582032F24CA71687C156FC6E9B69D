@@ -1,0 +1,233 @@
+﻿@model cursovaia2.Models.Cart
+
+@{
+    ViewData["Title"] = "Корзина";
+}
+
+<h1 style="margin-bottom: 2rem; color: #1e293b;">Ваша корзина</h1>
+
+@if (Model != null && Model.Items.Any())
+{
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 2rem;">
+        <div>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th style="width: 100px;">Фото</th>
+                        <th>Товар</th>
+                        <th style="width: 100px;">Цена</th>
+                        <th style="width: 120px;">Количество</th>
+                        <th style="width: 120px;">Сумма</th>
+                        <th style="width: 80px;"></th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr class="cart-item" data-item-id="@item.Id">
+                            <td>
+                                <div class="cart-item-image">📦</div>
+                            </td>
+                            <td>
+                                <div style="font-weight: 600; margin-bottom: 0.25rem;">@item.ProductName</div>
+                                <a href="/Product/Detail/@item.ProductId" style="color: #2563eb; font-size: 0.9rem; text-decoration: none;">Подробнее →</a>
+                            </td>
+                            <td class="item-price">₽@item.Price</td>
+                            <td>
+                                <div class="quantity-control">
+                                    <button type="button" class="qty-btn" onclick="decreaseQty(@item.Id)">−</button>
+                                    <input type="number" class="qty-input" value="@item.Quantity" min="1" onchange="updateQuantity(@item.Id, this.value)">
+                                    <button type="button" class="qty-btn" onclick="increaseQty(@item.Id)">+</button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="item-total" style="font-weight: 600; color: #2563eb;">₽@item.Total</div>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger" onclick="removeItem(@item.Id)" style="padding: 0.5rem 1rem; font-size: 0.9rem; border: none;">🗑️</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="/Product/Catalog" class="btn btn-secondary">
+                    ← Продолжить покупки
+                </a>
+                <button onclick="clearCart()" class="btn btn-secondary" style="margin-left: auto;">
+                    🗑️ Очистить корзину
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <div class="cart-summary">
+                <div style="margin-bottom: 2rem;">
+                    <div class="summary-row">
+                        <span>Товаров:</span>
+                        <span id="itemCount">@Model.ItemCount шт.</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Подтвкал:</span>
+                        <span>₽0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка:</span>
+                        <span>Бесплатно</span>
+                    </div>
+                </div>
+
+                <div class="summary-row total">
+                    <span>Итого:</span>
+                    <span id="totalPrice">₽@Model.Total</span>
+                </div>
+
+                <a href="/Cart/Checkout" class="btn btn-primary btn-block" style="margin-top: 1.5rem; padding: 1rem;">
+                    Оформить заказ
+                </a>
+
+                <div style="text-align: center; margin-top: 1rem; color: #888; font-size: 0.9rem;">
+                    <p>Безопасное оформление заказа</p>
+                    <p>🔒 SSL защита</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1.5rem; text-align: center;">
+                <h3 style="margin-bottom: 0.5rem;">Быстрая доставка</h3>
+                <p style="opacity: 0.9; font-size: 0.9rem;">По всей России за 1-2 дня</p>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="empty-state">
+        <h2>Корзина пуста</h2>
+        <p>В вашей корзине нет товаров. Начните покупки прямо сейчас!</p>
+        <a href="/Product/Catalog" class="btn btn-primary">Перейти в каталог</a>
+    </div>
+}
+
+<script>
+    function increaseQty(itemId) {
+        const input = document.querySelector(`[data-item-id="${itemId}"] .qty-input`);
+        input.value = parseInt(input.value) + 1;
+        updateQuantity(itemId, input.value);
+    }
+
+    function decreaseQty(itemId) {
+        const input = document.querySelector(`[data-item-id="${itemId}"] .qty-input`);
+        if (parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
+            updateQuantity(itemId, input.value);
+        }
+    }
+
+    function updateQuantity(itemId, quantity) {
+        const formData = new FormData();
+        formData.append('cartItemId', itemId);
+        formData.append('quantity', quantity);
+
+        fetch('/Cart/UpdateQuantityAjax', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    updateCartDisplay();
+                    showNotification('✓ Количество обновлено');
+                } else {
+                    showNotification('✗ ' + data.message, 'error');
+                }
+            })
+            .catch(error => console.error('Ошибка:', error));
+    }
+
+    function removeItem(itemId) {
+        if (confirm('Вы уверены?')) {
+            const formData = new FormData();
+            formData.append('cartItemId', itemId);
+
+            fetch('/Cart/RemoveItemAjax', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const row = document.querySelector(`[data-item-id="${itemId}"]`);
+                        row.remove();
+                        updateCartDisplay();
+                        showNotification('✓ Товар удален из корзины');
+                        if (document.querySelectorAll('.cart-item').length === 0) {
+                            location.reload();
+                        }
+                    }
+                })
+                .catch(error => console.error('Ошибка:', error));
+        }
+    }
+
+    function clearCart() {
+        if (confirm('Очистить корзину?')) {
+            window.location.href = '/Cart/Clear';
+        }
+    }
+
+    function updateCartDisplay() {
+        fetch('/Cart/GetCart')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('itemCount').textContent = data.itemCount + ' шт.';
+                document.getElementById('totalPrice').textContent = '₽' + data.total;
+            });
+    }
+
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background: ${type === 'error' ? '#ef4444' : '#10b981'};
+            color: white;
+            border-radius: 4px;
+            z-index: 9999;
+            animation: slideInUp 0.3s ease;
+        `;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOutDown 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+</script>
+
+<style>
+    @@keyframes slideInUp {
+        from {
+            transform: translateY(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideOutDown {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(400px);
+            opacity: 0;
+        }
+    }
+</style>

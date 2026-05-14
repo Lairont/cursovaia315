@@ -1,0 +1,445 @@
+﻿@{
+    ViewData["Title"] = "Каталог товаров";
+}
+
+@if (Model != null)
+{
+    var model = (dynamic)Model;
+    var categories = (List<cursovaia2.Models.Category>)model.Categories;
+
+    <h1 style="margin-bottom: 2rem; color: #1e293b;">Каталог товаров</h1>
+
+    <div class="catalog-container">
+        <!-- Фильтры -->
+        <div class="filters-section">
+            <div class="filter-group">
+                <label for="search">Поиск</label>
+                <input type="text" id="search" placeholder="Введите название или описание..." class="form-control">
+            </div>
+
+            <div class="filter-group">
+                <label for="category">Категория</label>
+                <select id="category" class="form-control">
+                    <option value="">Все категории</option>
+                    @foreach (var cat in categories)
+                    {
+                        <option value="@cat.Name">@cat.Icon @cat.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sort">Сортировка</label>
+                <select id="sort" class="form-control">
+                    <option value="name">По названию (А-Я)</option>
+                    <option value="name-desc">По названию (Я-А)</option>
+                    <option value="price-asc">Дешевле</option>
+                    <option value="price-desc">Дороже</option>
+                </select>
+            </div>
+
+            <div class="filter-group price-filter">
+                <label for="priceMin">Цена от</label>
+                <input type="number" id="priceMin" placeholder="0" min="0" class="form-control">
+                <label for="priceMax">до</label>
+                <input type="number" id="priceMax" placeholder="∞" min="0" class="form-control">
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; align-items: flex-end;">
+                <button id="resetBtn" class="btn btn-secondary">Очистить</button>
+            </div>
+        </div>
+
+        <!-- Список товаров -->
+        <div id="productsList" class="products-list">
+            <div class="loading">Загрузка...</div>
+        </div>
+    </div>
+}
+
+<style>
+    .catalog-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .filters-section {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 1.5rem;
+        background: #f8fafc;
+        border-radius: 8px;
+        align-items: flex-end;
+    }
+
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filter-group label {
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        min-width: 150px;
+    }
+
+    .form-control:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .price-filter {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .price-filter label {
+        margin: 0;
+    }
+
+    .price-filter input {
+        width: 100px;
+    }
+
+    .products-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        min-height: 300px;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .card-image {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: white;
+    }
+
+    .card-body {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex: 1;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin: 0;
+    }
+
+    .card-category {
+        font-size: 0.8rem;
+        color: #64748b;
+        margin: 0;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin: 0;
+        line-height: 1.4;
+        flex: 1;
+    }
+
+    .card-price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #3b82f6;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+        background: #3b82f6;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #2563eb;
+    }
+
+    .btn-secondary {
+        background: #e2e8f0;
+        color: #1e293b;
+    }
+
+    .btn-secondary:hover {
+        background: #cbd5e1;
+    }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    .loading {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 2rem;
+        color: #64748b;
+    }
+
+    .empty-state {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 3rem;
+        color: #64748b;
+    }
+
+    .empty-state h2 {
+        margin: 0;
+        color: #475569;
+    }
+
+    @media (max-width: 768px) {
+        .filters-section {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .form-control {
+            min-width: auto;
+        }
+
+        .products-list {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        loadProducts();
+
+        // Обработчики событий для фильтров
+        document.getElementById('search').addEventListener('input', debounce(loadProducts, 300));
+        document.getElementById('category').addEventListener('change', loadProducts);
+        document.getElementById('sort').addEventListener('change', loadProducts);
+        document.getElementById('priceMin').addEventListener('input', debounce(loadProducts, 300));
+        document.getElementById('priceMax').addEventListener('input', debounce(loadProducts, 300));
+        document.getElementById('resetBtn').addEventListener('click', resetFilters);
+    });
+
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    function loadProducts() {
+        const search = document.getElementById('search').value;
+        const category = document.getElementById('category').value;
+        const sort = document.getElementById('sort').value;
+        const priceMin = document.getElementById('priceMin').value;
+        const priceMax = document.getElementById('priceMax').value;
+
+        const formData = new FormData();
+        formData.append('search', search);
+        formData.append('category', category);
+        formData.append('sort', sort);
+        if (priceMin) formData.append('priceMin', priceMin);
+        if (priceMax) formData.append('priceMax', priceMax);
+
+        fetch('/Product/GetFilteredProducts', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                displayProducts(data.products);
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                document.getElementById('productsList').innerHTML = '<div class="empty-state"><h2>Ошибка при загрузке товаров</h2></div>';
+            });
+    }
+
+    function displayProducts(products) {
+        const container = document.getElementById('productsList');
+
+        if (!products || products.length === 0) {
+            container.innerHTML = '<div class="empty-state"><h2>Товары не найдены</h2><p>Попробуйте изменить параметры поиска</p></div>';
+            return;
+        }
+
+        container.innerHTML = products.map(product => `
+            <div class="card">
+                <div class="card-image">📦</div>
+                <div class="card-body">
+                    <h3 class="card-title">${escapeHtml(product.name)}</h3>
+                    <p class="card-category">${escapeHtml(product.category)}</p>
+                    <p class="card-description">${escapeHtml(product.description)}</p>
+                    <div class="card-price">₽${product.price}</div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-secondary" style="flex: 1;" onclick="viewDetails(${product.id})">
+                            Подробнее
+                        </button>
+                        <button class="btn btn-primary" style="flex: 1;" onclick="addToCartQuick(${product.id})">
+                            🛒 В корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function addToCartQuick(productId) {
+        const formData = new FormData();
+        formData.append('productId', productId);
+        formData.append('quantity', 1);
+
+        fetch('/Cart/AddToCartAjax', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showNotification('✓ Товар добавлен в корзину', 'success');
+                    updateCartBadge();
+                } else {
+                    showNotification('✗ ' + data.message, 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                showNotification('✗ Ошибка добавления товара', 'error');
+            });
+    }
+
+    function viewDetails(productId) {
+        window.location.href = `/Product/Detail/${productId}`;
+    }
+
+    function resetFilters() {
+        document.getElementById('search').value = '';
+        document.getElementById('category').value = '';
+        document.getElementById('sort').value = 'name';
+        document.getElementById('priceMin').value = '';
+        document.getElementById('priceMax').value = '';
+        loadProducts();
+    }
+
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background: ${type === 'success' ? '#10b981' : '#ef4444'};
+            color: white;
+            border-radius: 4px;
+            z-index: 9999;
+            animation: slideIn 0.3s ease;
+        `;
+        notification.textContent = message;
+        document.body.appendChild(notification);
+
+        setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }, 3000);
+    }
+
+    function updateCartBadge() {
+        fetch('/Cart/GetCartData')
+            .then(response => response.json())
+            .then(data => {
+                const badge = document.getElementById('cart-badge');
+                if (badge) {
+                    badge.textContent = data.itemCount;
+                    badge.style.display = data.itemCount > 0 ? 'block' : 'none';
+                }
+            });
+    }
+
+    function escapeHtml(text) {
+        const map = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        };
+        return text.replace(/[&<>"']/g, m => map[m]);
+    }
+</style>
+
+<style>
+    @@keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+</style>
+            <p>В выбранной категории нет товаров. Попробуйте выбрать другую категорию.</p>
+            <a href="/Product/Catalog" class="btn btn-primary">Вернуться к каталогу</a>
+        </div>
+    }
+}

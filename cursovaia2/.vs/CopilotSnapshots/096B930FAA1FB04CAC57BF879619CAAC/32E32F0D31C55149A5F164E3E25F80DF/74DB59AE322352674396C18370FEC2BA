@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Каталог товаров";
+}
+
+@if (Model != null)
+{
+    var model = (dynamic)Model;
+    var products = (List<cursovaia2.Models.Product>)model.Products;
+    var selectedCategory = (string?)model.SelectedCategory;
+    var selectedSort = (string?)model.SelectedSort;
+    var categories = (List<cursovaia2.Models.Category>)model.Categories;
+
+    <h1 style="margin-bottom: 2rem; color: #1e293b;">Каталог товаров</h1>
+
+    <div class="filters-section">
+        <form method="get" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="filter-group">
+                <label for="category">Категория</label>
+                <select name="category" id="category" onchange="this.form.submit()">
+                    <option value="">Все категории</option>
+                    @foreach (var cat in categories)
+                    {
+                        <option value="@cat.Name" @Html.Raw(selectedCategory == cat.Name ? "selected=\"selected\"" : "")>@cat.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sort">Сортировка</label>
+                <select name="sort" id="sort" onchange="this.form.submit()">
+                    <option value="name" @Html.Raw(selectedSort == "name" ? "selected=\"selected\"" : "")>По названию</option>
+                    <option value="price-asc" @Html.Raw(selectedSort == "price-asc" ? "selected=\"selected\"" : "")>Дешевле</option>
+                    <option value="price-desc" @Html.Raw(selectedSort == "price-desc" ? "selected=\"selected\"" : "")>Дороже</option>
+                </select>
+            </div>
+
+            @if (!string.IsNullOrEmpty(selectedCategory))
+            {
+                <div style="display: flex; align-items: flex-end;">
+                    <a href="/Product/Catalog" class="btn btn-secondary">Очистить фильтры</a>
+                </div>
+            }
+        </form>
+    </div>
+
+    @if (products.Any())
+    {
+        <div class="grid">
+            @foreach (var product in products)
+            {
+                <div class="card">
+                    <div class="card-image">📦</div>
+                    <div class="card-body">
+                        <h3 class="card-title">@product.Name</h3>
+                        <p style="font-size: 0.85rem; color: #888; margin-bottom: 0.5rem;">@product.Category</p>
+                        <p class="card-description">@product.Description</p>
+                        <div class="card-price">₽@product.Price</div>
+                        <a href="/Product/Detail/@product.Id" class="btn btn-secondary" style="margin-bottom: 0.5rem;">
+                            Подробнее
+                        </a>
+                        <a href="/Cart/AddToCart/@product.Id" class="btn btn-primary btn-block">
+                            🛒 В корзину
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <h2>Товары не найдены</h2>
+            <p>В выбранной категории нет товаров. Попробуйте выбрать другую категорию.</p>
+            <a href="/Product/Catalog" class="btn btn-primary">Вернуться к каталогу</a>
+        </div>
+    }
+}

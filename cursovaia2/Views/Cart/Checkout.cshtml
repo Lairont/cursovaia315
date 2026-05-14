@@ -1,0 +1,108 @@
+@model cursovaia2.Models.Cart
+
+@{
+    ViewData["Title"] = "Оформление заказа";
+}
+
+<div style="max-width: 900px; margin: 3rem auto;">
+    <h1 style="margin-bottom: 2rem; color: #1e293b;">Оформление заказа</h1>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div>
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                <h2 style="color: #1e293b; margin-bottom: 1.5rem;">Ваши данные</h2>
+
+                <form method="post" action="/Cart/ProcessOrder">
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1e293b;">ФИО *</label>
+                        <input type="text" name="fullName" placeholder="Иван Иванов" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1e293b;">Email *</label>
+                        <input type="email" name="email" placeholder="ivan@example.com" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1e293b;">Телефон *</label>
+                        <input type="tel" name="phone" placeholder="+7 (800) 123-45-67" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1e293b;">Адрес доставки *</label>
+                        <input type="text" name="address" placeholder="г. Москва, ул. Примерная, д. 1" required style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1e293b;">Комментарий к заказу</label>
+                        <textarea name="comment" placeholder="Ваши пожелания..." style="width: 100%; padding: 0.75rem; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1rem; font-family: inherit; resize: vertical;" rows="4"></textarea>
+                    </div>
+
+                    <div style="background: #f0f4ff; padding: 1rem; border-radius: 6px; margin-bottom: 2rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" name="terms" required />
+                            <span style="font-size: 0.9rem;">Я согласен с условиями использования и политикой конфиденциальности</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="padding: 1rem;">
+                        💳 Оплатить заказ
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                <h2 style="color: #1e293b; margin-bottom: 1.5rem;">Итоговая стоимость</h2>
+
+                @if (Model != null && Model.Items.Any())
+                {
+                    <div style="margin-bottom: 1.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                        @foreach (var item in Model.Items)
+                        {
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.95rem;">
+                                <span>
+                                    <strong>@item.ProductName</strong><br/>
+                                    <span style="color: #888;">@item.Quantity × ₽@item.Price</span>
+                                </span>
+                                <span style="font-weight: 600;">₽@item.Total</span>
+                            </div>
+                        }
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Подтвкал:</span>
+                            <span>₽0</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span>Доставка:</span>
+                            <span>Бесплатно</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 700; color: #2563eb; border-top: 2px solid #e2e8f0; padding-top: 1rem;">
+                        <span>Итого:</span>
+                        <span>₽@Model.Total</span>
+                    </div>
+                }
+
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; text-align: center; font-size: 0.9rem;">
+                    <p style="margin: 0;">🔒 Безопасное оформление</p>
+                    <p style="margin: 0; opacity: 0.9;">SSL защита платежей</p>
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #f0f4ff; border-radius: 6px; border-left: 4px solid #2563eb;">
+                    <p style="margin: 0; color: #1e293b; font-weight: 600;">📦 Способы доставки:</p>
+                    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Курьер по Москве (1-2 часа)</p>
+                    <p style="margin: 0.25rem 0 0 0; color: #666; font-size: 0.9rem;">Курьер по России (1-3 дня)</p>
+                </div>
+            </div>
+
+            <a href="/Cart/Index" style="display: block; text-align: center; margin-top: 1.5rem; color: #2563eb; text-decoration: none; font-weight: 600;">
+                ← Вернуться в корзину
+            </a>
+        </div>
+    </div>
+</div>

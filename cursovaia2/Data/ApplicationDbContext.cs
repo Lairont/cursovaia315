@@ -1,0 +1,21 @@
+using cursovaia2.Models;
+using cursovaia2.ModelsDb;
+using Microsoft.EntityFrameworkCore;
+
+namespace cursovaia2.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
+
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+
+        // Модели из БД
+        public DbSet<UserDb> Users { get; set; }
+        public DbSet<CategoryDb> CategoriesDb { get; set; }
+        public DbSet<ProductDb> ProductsDb { get; set; }
+    }
+}

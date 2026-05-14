@@ -1,0 +1,613 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\\u043C\u0438\u0433\u0440\u0430\u0446\u0438\u044F_\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:\u043C\u0438\u0433\u0440\u0430\u0446\u0438\u044F_\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\testing_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:testing_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\testing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:testing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\technical_details.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:technical_details.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\readme_implementation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:readme_implementation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\files_list.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:files_list.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\project_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:project_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\requirements.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:requirements.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\developer_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:developer_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\services\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:services\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\cart\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\product\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\product\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\modelsdb\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\modelsdb\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\modelsdb\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "RelativeDocumentMoniker": "\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "RelativeToolTip": "\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-08T21:15:28.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CategoryDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ModelsDb\\CategoryDb.cs",
+              "RelativeDocumentMoniker": "ModelsDb\\CategoryDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ModelsDb\\CategoryDb.cs",
+              "RelativeToolTip": "ModelsDb\\CategoryDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T21:15:19.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ModelsDb\\UserDb.cs",
+              "RelativeDocumentMoniker": "ModelsDb\\UserDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ModelsDb\\UserDb.cs",
+              "RelativeToolTip": "ModelsDb\\UserDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T21:15:14.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAABBwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T21:08:55.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-08T21:08:42.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:11:11.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TESTING_GUIDE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\TESTING_GUIDE.md",
+              "RelativeDocumentMoniker": "TESTING_GUIDE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\TESTING_GUIDE.md",
+              "RelativeToolTip": "TESTING_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:28:32.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProductDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ModelsDb\\ProductDb.cs",
+              "RelativeDocumentMoniker": "ModelsDb\\ProductDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ModelsDb\\ProductDb.cs",
+              "RelativeToolTip": "ModelsDb\\ProductDb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T21:15:23.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:14:03.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QUICKSTART.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\QUICKSTART.md",
+              "RelativeDocumentMoniker": "QUICKSTART.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\QUICKSTART.md",
+              "RelativeToolTip": "QUICKSTART.md",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwBUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:15:32.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TESTING.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\TESTING.md",
+              "RelativeDocumentMoniker": "TESTING.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\TESTING.md",
+              "RelativeToolTip": "TESTING.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:17:38.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SUMMARY.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\SUMMARY.md",
+              "RelativeDocumentMoniker": "SUMMARY.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\SUMMARY.md",
+              "RelativeToolTip": "SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:28:55.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:08:18.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:09:24.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Models\\CartItem.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\CartItem.cs",
+              "RelativeToolTip": "Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:09:28.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "README_IMPLEMENTATION.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\README_IMPLEMENTATION.md",
+              "RelativeDocumentMoniker": "README_IMPLEMENTATION.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\README_IMPLEMENTATION.md",
+              "RelativeToolTip": "README_IMPLEMENTATION.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:27:53.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TECHNICAL_DETAILS.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\TECHNICAL_DETAILS.md",
+              "RelativeDocumentMoniker": "TECHNICAL_DETAILS.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\TECHNICAL_DETAILS.md",
+              "RelativeToolTip": "TECHNICAL_DETAILS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:28:10.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\Cart.cs",
+              "RelativeToolTip": "Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:09:32.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:09:34.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:09:55.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAuwLgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:10:11.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAIBJwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:10:15.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FILES_LIST.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\FILES_LIST.md",
+              "RelativeDocumentMoniker": "FILES_LIST.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\FILES_LIST.md",
+              "RelativeToolTip": "FILES_LIST.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:17:03.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PROJECT_SUMMARY.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\PROJECT_SUMMARY.md",
+              "RelativeDocumentMoniker": "PROJECT_SUMMARY.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\PROJECT_SUMMARY.md",
+              "RelativeToolTip": "PROJECT_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:16:05.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "REQUIREMENTS.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\REQUIREMENTS.md",
+              "RelativeDocumentMoniker": "REQUIREMENTS.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\REQUIREMENTS.md",
+              "RelativeToolTip": "REQUIREMENTS.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:15:13.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DEVELOPER_GUIDE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\DEVELOPER_GUIDE.md",
+              "RelativeDocumentMoniker": "DEVELOPER_GUIDE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\DEVELOPER_GUIDE.md",
+              "RelativeToolTip": "DEVELOPER_GUIDE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:14:45.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ARCHITECTURE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ARCHITECTURE.md",
+              "RelativeDocumentMoniker": "ARCHITECTURE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\ARCHITECTURE.md",
+              "RelativeToolTip": "ARCHITECTURE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:14:24.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Services\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "Services\\SessionExtensions.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Services\\SessionExtensions.cs",
+              "RelativeToolTip": "Services\\SessionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:12:47.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:12:29.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderConfirmed.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Cart\\OrderConfirmed.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\OrderConfirmed.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Cart\\OrderConfirmed.cshtml",
+              "RelativeToolTip": "Views\\Cart\\OrderConfirmed.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:12:26.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Cart\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Checkout.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Cart\\Checkout.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Checkout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:12:18.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAK8AAAAAAAAAAIBZwOkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:12:06.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Product\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Detail.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Product\\Detail.cshtml",
+              "RelativeToolTip": "Views\\Product\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:11:56.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Catalog.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Product\\Catalog.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Catalog.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Product\\Catalog.cshtml",
+              "RelativeToolTip": "Views\\Product\\Catalog.cshtml",
+              "ViewState": "AgIAAOgAAAAAAAAAAIBZwL0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:11:44.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Contacts.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Home\\Contacts.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Contacts.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Home\\Contacts.cshtml",
+              "RelativeToolTip": "Views\\Home\\Contacts.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:11:36.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:11:26.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADQCAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-05T07:10:39.452Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

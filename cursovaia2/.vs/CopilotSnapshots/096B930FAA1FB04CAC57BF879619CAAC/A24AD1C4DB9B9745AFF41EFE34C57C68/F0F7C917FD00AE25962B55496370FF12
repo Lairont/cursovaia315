@@ -1,0 +1,56 @@
+﻿using cursovaia2.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+
+namespace cursovaia2.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            var categories = GetCategories();
+            var viewModel = new { Categories = categories };
+            return View(viewModel);
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        private List<Category> GetCategories()
+        {
+            return new List<Category>
+            {
+                new() { Id = 1, Name = "Ручки", Icon = "✏️" },
+                new() { Id = 2, Name = "Карандаши", Icon = "📝" },
+                new() { Id = 3, Name = "Тетради", Icon = "📓" },
+                new() { Id = 4, Name = "Блокноты", Icon = "📄" },
+                new() { Id = 5, Name = "Клей и скотч", Icon = "📌" },
+                new() { Id = 6, Name = "Папки и файлы", Icon = "📂" }
+            };
+        }
+
+        private List<Product> GetPopularProducts()
+        {
+            return new List<Product>
+            {
+                new() { Id = 1, Name = "Шариковая ручка Blue", Category = "Ручки", Price = 25, Description = "Удобная шариковая ручка с синей пастой", ImageUrl = "/images/pen1.jpg", Stock = 100 },
+                new() { Id = 2, Name = "Карандаш HB", Category = "Карандаши", Price = 15, Description = "Классический карандаш для письма", ImageUrl = "/images/pencil1.jpg", Stock = 150 },
+                new() { Id = 3, Name = "Тетрадь 48 листов", Category = "Тетради", Price = 45, Description = "Качественная тетрадь с плотной бумагой", ImageUrl = "/images/notebook1.jpg", Stock = 200 },
+                new() { Id = 4, Name = "Блокнот Premium", Category = "Блокноты", Price = 85, Description = "Стильный блокнот для заметок", ImageUrl = "/images/notepad1.jpg", Stock = 80 }
+            };
+        }
+    }
+}

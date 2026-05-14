@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+@if (Model != null)
+{
+    var model = (dynamic)Model;
+    var categories = (List<cursovaia2.Models.Category>)model.Categories;
+    var popularProducts = (List<cursovaia2.Models.Product>)model.PopularProducts;
+
+    <div class="banner">
+        <h1>Добро пожаловать в Stationery Store</h1>
+        <p>Качественные канцелярские товары для работы и учёбы</p>
+    </div>
+
+    <section>
+        <h2 style="margin-bottom: 2rem; color: #1e293b;">Категории</h2>
+        <div class="grid categories">
+            @foreach (var category in categories)
+            {
+                <a href="/Product/Catalog?category=@category.Name" class="category-card">
+                    <div class="category-icon">@Html.Raw(category.Icon)</div>
+                    <div class="category-name">@category.Name</div>
+                </a>
+            }
+        </div>
+    </section>
+
+    <section>
+        <h2 style="margin-bottom: 2rem; color: #1e293b;">Популярные товары</h2>
+        <div class="grid">
+            @foreach (var product in popularProducts)
+            {
+                <div class="card">
+                    <div class="card-image">📦</div>
+                    <div class="card-body">
+                        <h3 class="card-title">@product.Name</h3>
+                        <p class="card-description">@product.Description</p>
+                        <div class="card-price">₽@product.Price</div>
+                        <a href="/Product/Detail/@product.Id" class="btn btn-secondary" style="margin-bottom: 0.5rem;">
+                            Подробнее
+                        </a>
+                        <a href="/Cart/AddToCart/@product.Id" class="btn btn-primary btn-block">
+                            🛒 В корзину
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+}
+
+<div class="text-center" style="display: none;">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

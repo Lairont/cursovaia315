@@ -1,0 +1,20 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace cursovaia2.ModelsDb
+{
+    [Table("users")]
+    public class UserDb
+    {
+        [Key]
+        public int Id { get; set; }
+
+        // Добавьте здесь поля соответствующие вашей таблице пользователей
+        // Пример:
+        // [Column("username")]
+        // public string Username { get; set; } = string.Empty;
+        //
+        // [Column("email")]
+        // public string Email { get; set; } = string.Empty;
+    }
+}
