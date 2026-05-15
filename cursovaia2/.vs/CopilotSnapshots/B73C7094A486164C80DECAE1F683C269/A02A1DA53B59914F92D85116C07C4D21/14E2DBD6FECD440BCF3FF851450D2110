@@ -1,0 +1,43 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace cursovaia2.ModelsDb
+{
+    [Table("users")]
+    public class UserDb
+    {
+        [Key]
+        [Column("id")]
+        public int Id { get; set; }
+
+        [Column("email")]
+        [Required(ErrorMessage = "Email требуется")]
+        [EmailAddress(ErrorMessage = "Некорректный email адрес")]
+        [StringLength(100)]
+        public string Email { get; set; } = string.Empty;
+
+        [Column("password_hash")]
+        [Required(ErrorMessage = "Пароль требуется")]
+        [StringLength(255)]
+        public string PasswordHash { get; set; } = string.Empty;
+
+        [Column("role_id")]
+        public int? RoleId { get; set; }
+
+        [Column("status")]
+        [StringLength(20)]
+        public string Status { get; set; } = "active";
+
+        [Column("created_at")]
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        // Navigation properties
+        [ForeignKey("RoleId")]
+        public virtual RoleDb? Role { get; set; }
+
+        public virtual CustomerDb? Customer { get; set; }
+        public virtual ICollection<OrderDb> Orders { get; set; } = new List<OrderDb>();
+        public virtual ICollection<ReviewDb> Reviews { get; set; } = new List<ReviewDb>();
+        public virtual ICollection<WishlistDb> Wishlists { get; set; } = new List<WishlistDb>();
+    }
+}

@@ -1,0 +1,33 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace cursovaia2.ModelsDb
+{
+    [Table("customers")]
+    public class CustomerDb
+    {
+        [Key]
+        [Column("id")]
+        public int Id { get; set; }
+
+        [Column("user_id")]
+        public int UserId { get; set; }
+
+        [Column("name")]
+        [Required]
+        [StringLength(100)]
+        public string Name { get; set; } = string.Empty;
+
+        [Column("phone")]
+        [StringLength(20)]
+        public string? Phone { get; set; }
+
+        [Column("bonus_balance")]
+        [Range(0, double.MaxValue)]
+        public decimal BonusBalance { get; set; } = 0;
+
+        // Navigation properties
+        [ForeignKey("UserId")]
+        public virtual UserDb? User { get; set; }
+    }
+}

@@ -1,0 +1,98 @@
+﻿@model cursovaia2.Models.Product
+
+@{
+    ViewData["Title"] = Model?.Name ?? "Подробно о товаре";
+}
+
+@if (Model != null)
+{
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+        <div>
+            <div class="card-image" style="height: 400px; margin-bottom: 1rem;">📦</div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+                <div class="card-image" style="height: 100px; cursor: pointer;">📦</div>
+                <div class="card-image" style="height: 100px; cursor: pointer; opacity: 0.5;">📦</div>
+                <div class="card-image" style="height: 100px; cursor: pointer; opacity: 0.5;">📦</div>
+                <div class="card-image" style="height: 100px; cursor: pointer; opacity: 0.5;">📦</div>
+            </div>
+        </div>
+
+        <div>
+            <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                <p style="color: #888; margin-bottom: 1rem;">@Model.Category</p>
+                <h1 style="color: #1e293b; margin-bottom: 1rem;">@Model.Name</h1>
+
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                    <div style="font-size: 2rem; font-weight: 700; color: #2563eb;">₽@Model.Price</div>
+                    <div style="background: #e0e7ff; padding: 0.5rem 1rem; border-radius: 6px; color: #2563eb; font-weight: 600;">
+                        @(Model.Stock > 0 ? "В наличии" : "Нет в наличии")
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem; line-height: 1.8;">
+                    <h3 style="color: #1e293b; margin-bottom: 1rem;">Описание</h3>
+                    <p>@Model.Description</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; font-size: 0.95rem; color: #666;">
+                    <div>
+                        <strong style="color: #1e293b;">Артикул:</strong><br/>
+                        STR-@Model.Id.ToString("0000")
+                    </div>
+                    <div>
+                        <strong style="color: #1e293b;">Наличие:</strong><br/>
+                        @Model.Stock шт.
+                    </div>
+                </div>
+
+                <form method="post" action="/Cart/AddToCart/@Model.Id" style="display: flex; gap: 1rem;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1; padding: 1rem;">
+                        🛒 Добавить в корзину
+                    </button>
+                </form>
+
+                <a href="/Product/Catalog" class="btn btn-secondary btn-block" style="margin-top: 1rem;">
+                    ← Вернуться в каталог
+                </a>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; margin-top: 2rem; text-align: center;">
+                <h3 style="margin-bottom: 0.5rem;">Быстрая доставка</h3>
+                <p style="opacity: 0.9; margin-bottom: 0.5rem;">Закажите сейчас, получите завтра</p>
+                <p style="opacity: 0.8; font-size: 0.9rem;">По всей России</p>
+            </div>
+        </div>
+    </div>
+
+    <section style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+        <h2 style="color: #1e293b; margin-bottom: 2rem;">Характеристики</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 1rem; font-weight: 600; color: #1e293b; width: 30%;">Название</td>
+                    <td style="padding: 1rem; color: #666;">@Model.Name</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 1rem; font-weight: 600; color: #1e293b;">Категория</td>
+                    <td style="padding: 1rem; color: #666;">@Model.Category</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 1rem; font-weight: 600; color: #1e293b;">Цена</td>
+                    <td style="padding: 1rem; color: #2563eb; font-weight: 700;">₽@Model.Price</td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem; font-weight: 600; color: #1e293b;">Наличие на складе</td>
+                    <td style="padding: 1rem; color: #666;">@Model.Stock шт.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+}
+else
+{
+    <div class="empty-state">
+        <h2>Товар не найден</h2>
+        <p>Извините, но товар, который вы ищете, недоступен.</p>
+        <a href="/Product/Catalog" class="btn btn-primary">Вернуться в каталог</a>
+    </div>
+}

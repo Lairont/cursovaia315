@@ -1,0 +1,184 @@
+﻿using cursovaia2.Models;
+using cursovaia2.Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace cursovaia2.Controllers
+{
+    public class CartController : Controller
+    {
+        private Cart GetCart()
+        {
+            var cart = HttpContext.Session.Get<Cart>("cart");
+            if (cart == null)
+            {
+                cart = new Cart();
+                HttpContext.Session.Set("cart", cart);
+            }
+            return cart;
+        }
+
+        private void SaveCart(Cart cart)
+        {
+            HttpContext.Session.Set("cart", cart);
+        }
+
+        public IActionResult Index()
+        {
+            var cart = GetCart();
+            return View(cart);
+        }
+
+        [HttpGet]
+        public IActionResult GetCartData()
+        {
+            var cart = GetCart();
+            return Json(new { itemCount = cart.ItemCount, total = cart.Total, items = cart.Items });
+        }
+
+        public IActionResult AddToCart(int productId)
+        {
+            var products = GetAllProducts();
+            var product = products.FirstOrDefault(p => p.Id == productId);
+
+            if (product != null)
+            {
+                var cart = GetCart();
+                cart.AddItem(product);
+                SaveCart(cart);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult AddToCartAjax(int productId, int quantity = 1)
+        {
+            var products = GetAllProducts();
+            var product = products.FirstOrDefault(p => p.Id == productId);
+
+            if (product == null)
+                return Json(new { success = false, message = "Товар не найден" });
+
+            var cart = GetCart();
+            cart.AddItem(product, quantity);
+            SaveCart(cart);
+
+            return Json(new { success = true, message = "Товар добавлен в корзину", itemCount = cart.ItemCount, total = cart.Total });
+        }
+
+        public IActionResult RemoveItem(int cartItemId)
+        {
+            var cart = GetCart();
+            cart.RemoveItem(cartItemId);
+            SaveCart(cart);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult RemoveItemAjax(int cartItemId)
+        {
+            var cart = GetCart();
+            cart.RemoveItem(cartItemId);
+            SaveCart(cart);
+
+            return Json(new { success = true, message = "Товар удален из корзины", itemCount = cart.ItemCount, total = cart.Total });
+        }
+
+        public IActionResult UpdateQuantity(int cartItemId, int quantity)
+        {
+            if (quantity > 0)
+            {
+                var cart = GetCart();
+                cart.UpdateQuantity(cartItemId, quantity);
+                SaveCart(cart);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult UpdateQuantityAjax(int cartItemId, int quantity)
+        {
+            if (quantity <= 0)
+                return Json(new { success = false, message = "Неверное количество" });
+
+            var cart = GetCart();
+            cart.UpdateQuantity(cartItemId, quantity);
+            SaveCart(cart);
+
+            return Json(new { success = true, message = "Количество обновлено", itemCount = cart.ItemCount, total = cart.Total });
+        }
+
+        public IActionResult Clear()
+        {
+            var cart = GetCart();
+            cart.Clear();
+            SaveCart(cart);
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Checkout()
+        {
+            var cart = GetCart();
+            if (cart.Items.Count == 0)
+                return RedirectToAction("Index");
+
+            return View(cart);
+        }
+
+        public IActionResult ProcessOrder()
+        {
+            var cart = GetCart();
+            if (cart.Items.Count == 0)
+                return RedirectToAction("Index");
+
+            cart.Clear();
+            SaveCart(cart);
+
+            return RedirectToAction("OrderConfirmed");
+        }
+
+        public IActionResult OrderConfirmed()
+        {
+            return View();
+        }
+
+        private List<Product> GetAllProducts()
+        {
+            return new List<Product>
+            {
+                new() { Id = 1, Name = "Шариковая ручка Blue", Category = "Ручки", Price = 25, Description = "Удобная шариковая ручка с синей пастой для письма", ImageUrl = "/images/pen1.jpg", Stock = 100 },
+                new() { Id = 2, Name = "Шариковая ручка Red", Category = "Ручки", Price = 25, Description = "Яркая красная ручка для письма", ImageUrl = "/images/pen2.jpg", Stock = 80 },
+                new() { Id = 3, Name = "Гелевая ручка", Category = "Ручки", Price = 35, Description = "Премиум гелевая ручка с плавным письмом", ImageUrl = "/images/pen3.jpg", Stock = 60 },
+                new() { Id = 4, Name = "Ручка-маркер", Category = "Ручки", Price = 45, Description = "Многофункциональная ручка-маркер", ImageUrl = "/images/pen4.jpg", Stock = 50 },
+
+                new() { Id = 5, Name = "Карандаш HB", Category = "Карандаши", Price = 15, Description = "Классический карандаш HB для письма и рисования", ImageUrl = "/images/pencil1.jpg", Stock = 150 },
+                new() { Id = 6, Name = "Цветные карандаши (12 шт)", Category = "Карандаши", Price = 120, Description = "Набор из 12 ярких цветных карандашей", ImageUrl = "/images/pencil2.jpg", Stock = 90 },
+                new() { Id = 7, Name = "Карандаш 2H", Category = "Карандаши", Price = 15, Description = "Твёрдый карандаш для чертежей", ImageUrl = "/images/pencil3.jpg", Stock = 100 },
+                new() { Id = 8, Name = "Механический карандаш", Category = "Карандаши", Price = 55, Description = "Удобный механический карандаш 0.5 мм", ImageUrl = "/images/pencil4.jpg", Stock = 70 },
+
+                new() { Id = 9, Name = "Тетрадь 48 листов", Category = "Тетради", Price = 45, Description = "Качественная тетрадь с плотной белой бумагой", ImageUrl = "/images/notebook1.jpg", Stock = 200 },
+                new() { Id = 10, Name = "Тетрадь 96 листов", Category = "Тетради", Price = 65, Description = "Толстая тетрадь для долгосрочного использования", ImageUrl = "/images/notebook2.jpg", Stock = 150 },
+                new() { Id = 11, Name = "Тетрадь клетка 24 листа", Category = "Тетради", Price = 25, Description = "Компактная тетрадь в клетку", ImageUrl = "/images/notebook3.jpg", Stock = 180 },
+                new() { Id = 12, Name = "Тетрадь линия 24 листа", Category = "Тетради", Price = 25, Description = "Тетрадь в линию для письма", ImageUrl = "/images/notebook4.jpg", Stock = 180 },
+
+                new() { Id = 13, Name = "Блокнот Premium", Category = "Блокноты", Price = 85, Description = "Стильный блокнот премиум класса для заметок", ImageUrl = "/images/notepad1.jpg", Stock = 80 },
+                new() { Id = 14, Name = "Блокнот спиральный", Category = "Блокноты", Price = 65, Description = "Удобный спиральный блокнот", ImageUrl = "/images/notepad2.jpg", Stock = 100 },
+                new() { Id = 15, Name = "Блокнот А5", Category = "Блокноты", Price = 55, Description = "Компактный блокнот формата А5", ImageUrl = "/images/notepad3.jpg", Stock = 120 },
+                new() { Id = 16, Name = "Блокнот с твёрдой обложкой", Category = "Блокноты", Price = 95, Description = "Прочный блокнот с твёрдой обложкой", ImageUrl = "/images/notepad4.jpg", Stock = 60 },
+
+                new() { Id = 17, Name = "Клей ПВА 100мл", Category = "Клей и скотч", Price = 35, Description = "Универсальный клей ПВА для бумаги", ImageUrl = "/images/glue1.jpg", Stock = 110 },
+                new() { Id = 18, Name = "Скотч прозрачный", Category = "Клей и скотч", Price = 25, Description = "Прочный прозрачный скотч 48мм", ImageUrl = "/images/tape1.jpg", Stock = 200 },
+                new() { Id = 19, Name = "Клей-карандаш", Category = "Клей и скотч", Price = 20, Description = "Удобный клей в карандаше", ImageUrl = "/images/glue2.jpg", Stock = 140 },
+                new() { Id = 20, Name = "Скотч двусторонний", Category = "Клей и скотч", Price = 40, Description = "Двусторонний скотч для надёжного крепления", ImageUrl = "/images/tape2.jpg", Stock = 90 },
+
+                new() { Id = 21, Name = "Папка А4", Category = "Папки и файлы", Price = 55, Description = "Стандартная папка для документов А4", ImageUrl = "/images/folder1.jpg", Stock = 150 },
+                new() { Id = 22, Name = "Файлы (100 шт)", Category = "Папки и файлы", Price = 85, Description = "Набор из 100 прозрачных файлов", ImageUrl = "/images/files1.jpg", Stock = 100 },
+                new() { Id = 23, Name = "Папка-скоросшиватель", Category = "Папки и файлы", Price = 45, Description = "Удобная папка со скоросшивателем", ImageUrl = "/images/folder2.jpg", Stock = 120 },
+                new() { Id = 24, Name = "Лоток для бумаги", Category = "Папки и файлы", Price = 75, Description = "Настольный лоток для офисной бумаги", ImageUrl = "/images/tray1.jpg", Stock = 70 }
+            };
+        }
+    }
+}

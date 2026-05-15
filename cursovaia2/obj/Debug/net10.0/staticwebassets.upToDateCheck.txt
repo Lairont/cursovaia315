@@ -61,65 +61,65 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-D:\работы\cursovaia2\wwwroot\css\site.css
-D:\работы\cursovaia2\wwwroot\favicon.ico
-D:\работы\cursovaia2\wwwroot\js\site.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-D:\работы\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation\dist\additional-methods.js
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-D:\работы\cursovaia2\wwwroot\lib\jquery-validation\LICENSE.md
-D:\работы\cursovaia2\wwwroot\lib\jquery\dist\jquery.js
-D:\работы\cursovaia2\wwwroot\lib\jquery\dist\jquery.min.js
-D:\работы\cursovaia2\wwwroot\lib\jquery\dist\jquery.min.map
-D:\работы\cursovaia2\wwwroot\lib\jquery\dist\jquery.slim.js
-D:\работы\cursovaia2\wwwroot\lib\jquery\dist\jquery.slim.min.js
-D:\работы\cursovaia2\wwwroot\lib\jquery\dist\jquery.slim.min.map
-D:\работы\cursovaia2\wwwroot\lib\jquery\LICENSE.txt
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\LICENSE.txt
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\dist\jquery.slim.min.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\dist\jquery.slim.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\dist\jquery.slim.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\dist\jquery.min.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\dist\jquery.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery\dist\jquery.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation\LICENSE.md
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation\dist\additional-methods.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\js\site.js
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\favicon.ico
+F:\Visual Studio\job\practica\cursovaia315\cursovaia2\wwwroot\css\site.css
