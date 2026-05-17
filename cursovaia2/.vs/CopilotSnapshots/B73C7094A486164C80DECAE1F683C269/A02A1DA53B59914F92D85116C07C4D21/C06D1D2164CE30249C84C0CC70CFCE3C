@@ -1,0 +1,237 @@
+﻿@using cursovaia2.ModelsDb;
+@model ProductDb
+
+@{
+    ViewData["Title"] = Model?.Name ?? "Подробно о товаре";
+}
+
+@if (Model != null)
+{
+    <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/Product/Catalog">Каталог</a></li>
+                @if (Model.Category != null)
+                {
+                    <li class="breadcrumb-item"><a href="/Product/Catalog?categoryId=@Model.CategoryId">@Model.Category.Name</a></li>
+                }
+                <li class="breadcrumb-item active">@Model.Name</li>
+            </ol>
+        </nav>
+
+        <div class="row mb-4">
+            <!-- Левая часть - изображения -->
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body bg-light text-center" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                        @if (Model.Images != null && Model.Images.Count > 0)
+                        {
+                            <img src="@Model.Images.First().Url" alt="@Model.Name" class="img-fluid" style="max-height: 100%; max-width: 100%;">
+                        }
+                        else
+                        {
+                            <div style="font-size: 100px; color: #ccc;">📦</div>
+                        }
+                    </div>
+                    @if (Model.Images != null && Model.Images.Count > 1)
+                    {
+                        <div class="card-footer">
+                            <div class="row g-2">
+                                @foreach (var image in Model.Images.Take(4))
+                                {
+                                    <div class="col-3">
+                                        <img src="@image.Url" alt="@Model.Name" class="img-fluid rounded" style="cursor: pointer; opacity: 0.6; transition: opacity 0.3s;" 
+                                             onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Правая часть - информация и покупка -->
+            <div class="col-md-7">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <!-- Хлебная тропа и категория -->
+                        @if (Model.Category != null)
+                        {
+                            <p class="text-muted mb-2">📂 @Model.Category.Name</p>
+                        }
+
+                        <!-- Название -->
+                        <h1 class="mb-3">@Model.Name</h1>
+
+                        <!-- Бренд -->
+                        @if (Model.Brand != null)
+                        {
+                            <p class="text-secondary mb-3"><strong>Бренд:</strong> @Model.Brand.Name</p>
+                        }
+
+                        <!-- Цена и статус -->
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <h2 class="text-primary mb-0">@Model.Price.ToString("C")</h2>
+                            <span class="badge bg-success">
+                                @(Model.IsActive ? "✓ В наличии" : "✗ Недоступен")
+                            </span>
+                        </div>
+
+                        <!-- Артикул и стоимость закупки -->
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <p class="text-muted mb-1">Артикул</p>
+                                <p class="fw-bold">@Model.Sku</p>
+                            </div>
+                            @if (Model.CostPrice.HasValue)
+                            {
+                                <div class="col-6">
+                                    <p class="text-muted mb-1">Себестоимость</p>
+                                    <p class="fw-bold">@Model.CostPrice.Value.ToString("C")</p>
+                                </div>
+                            }
+                        </div>
+
+                        <!-- Описание -->
+                        @if (!string.IsNullOrEmpty(Model.Description))
+                        {
+                            <div class="mb-4">
+                                <h5>Описание</h5>
+                                <p class="text-muted">@Model.Description</p>
+                            </div>
+                        }
+
+                        <!-- Кнопка добавления в корзину -->
+                        <div class="d-grid gap-2 mb-3">
+                            <button class="btn btn-primary btn-lg" onclick="addToCart(@Model.Id, 1)" @(Model.IsActive ? "" : "disabled")>
+                                🛒 Добавить в корзину
+                            </button>
+                        </div>
+
+                        <!-- Кнопка назад -->
+                        <a href="/Product/Catalog" class="btn btn-outline-secondary w-100">
+                            ← Вернуться в каталог
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Информационный баннер -->
+                <div class="alert alert-info mt-3 mb-0">
+                    <h5 class="alert-heading">📦 Быстрая доставка</h5>
+                    <p class="mb-1">Закажите сейчас, получите в течение 2-3 дней</p>
+                    <small>По всей России</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Характеристики -->
+        @if (Model.Attributes != null && Model.Attributes.Count > 0)
+        {
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">📋 Характеристики</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <tbody>
+                                @foreach (var attr in Model.Attributes)
+                                {
+                                    <tr style="border-bottom: 1px solid #e9ecef;">
+                                        <td class="fw-bold" style="width: 30%;">@attr.Key</td>
+                                        <td>@attr.Value</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Основная информация -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">ℹ️ Информация о товаре</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-1">Название</p>
+                        <p class="fw-bold">@Model.Name</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-1">Артикул</p>
+                        <p class="fw-bold">@Model.Sku</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-1">Категория</p>
+                        <p class="fw-bold">@(Model.Category?.Name ?? "—")</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-1">Бренд</p>
+                        <p class="fw-bold">@(Model.Brand?.Name ?? "—")</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-1">Цена</p>
+                        <p class="fw-bold text-primary">@Model.Price.ToString("C")</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <p class="text-muted mb-1">Статус</p>
+                        <p class="fw-bold">
+                            <span class="badge @(Model.IsActive ? "bg-success" : "bg-danger")">
+                                @(Model.IsActive ? "Активен" : "Неактивен")
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="alert alert-warning">
+            <h4>⚠️ Товар не найден</h4>
+            <p>Извините, но товар, который вы ищете, недоступен или был удален.</p>
+            <a href="/Product/Catalog" class="btn btn-primary mt-2">← Вернуться в каталог</a>
+        </div>
+    </div>
+}
+
+<script>
+    function addToCart(productId, quantity) {
+        fetch('/Cart/AddToCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                productId: productId,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('✅ ' + data.message);
+                updateCartCount(data.cartCount);
+            } else {
+                alert('❌ ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('❌ Ошибка при добавлении в корзину');
+        });
+    }
+
+    function updateCartCount(count) {
+        const cartCountElement = document.querySelector('.cart-count');
+        if (cartCountElement) {
+            cartCountElement.textContent = count;
+        }
+    }
+</script>

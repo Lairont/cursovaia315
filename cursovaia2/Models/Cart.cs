@@ -29,9 +29,9 @@ namespace cursovaia2.Models
             }
         }
 
-        public void RemoveItem(int cartItemId)
+        public void RemoveItem(int productId)
         {
-            var item = Items.FirstOrDefault(x => x.Id == cartItemId);
+            var item = Items.FirstOrDefault(x => x.ProductId == productId);
             if (item != null)
             {
                 Items.Remove(item);

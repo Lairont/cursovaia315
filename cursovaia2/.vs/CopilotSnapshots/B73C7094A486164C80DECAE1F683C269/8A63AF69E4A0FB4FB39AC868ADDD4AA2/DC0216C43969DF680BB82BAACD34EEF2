@@ -1,0 +1,283 @@
+﻿using cursovaia2.Data;
+using cursovaia2.Models;
+using cursovaia2.ModelsDb;
+using cursovaia2.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace cursovaia2.Controllers
+{
+    public class CartController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        public CartController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: Cart/Index - просмотр корзины
+        public IActionResult Index()
+        {
+            try
+            {
+                var userId = HttpContext.Session.GetInt32("UserId");
+
+                if (!userId.HasValue)
+                {
+                    // Если не авторизован - используем сессию
+                    var cart = GetSessionCart();
+                    return View(cart);
+                }
+
+                // Если авторизован - загружаем из БД
+                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+                if (customer == null)
+                {
+                    // Создаём покупателя если его нет
+                    customer = new CustomerDb
+                    {
+                        UserId = userId.Value,
+                        Name = HttpContext.Session.GetString("Email") ?? "Пользователь",
+                        BonusBalance = 0
+                    };
+                    _context.Customers.Add(customer);
+                    _context.SaveChanges();
+                }
+
+                var dbCart = _context.Carts
+                    .Include(c => c.Items)
+                    .ThenInclude(ci => ci.Product)
+                    .FirstOrDefault(c => c.CustomerId == customer.Id);
+
+                if (dbCart == null)
+                {
+                    dbCart = new CartDb { CustomerId = customer.Id, CreatedAt = DateTime.UtcNow };
+                    _context.Carts.Add(dbCart);
+                    _context.SaveChanges();
+                }
+
+                // Преобразуем в модель Cart для представления
+                var cart = new Cart();
+                foreach (var item in dbCart.Items)
+                {
+                    var product = new Product
+                    {
+                        Id = item.Product.Id,
+                        Name = item.Product.Name,
+                        Price = item.Product.Price ?? 0
+                    };
+                    for (int i = 0; i < item.Quantity; i++)
+                    {
+                        cart.AddItem(product);
+                    }
+                }
+
+                ViewBag.CartId = dbCart.Id;
+                return View(cart);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = $"Ошибка при загрузке корзины: {ex.Message}";
+                return View(new Cart());
+            }
+        }
+
+        // POST: Cart/AddToCart - добавить товар в корзину
+        [HttpPost]
+        public IActionResult AddToCart(int productId, int quantity = 1)
+        {
+            try
+            {
+                var product = _context.ProductsDb.FirstOrDefault(p => p.Id == productId && p.IsActive);
+
+                if (product == null)
+                    return Json(new { success = false, message = "Товар не найден" });
+
+                var userId = HttpContext.Session.GetInt32("UserId");
+
+                if (!userId.HasValue)
+                {
+                    // Если не авторизован - используем сессию
+                    var cart = GetSessionCart();
+                    var sessionProduct = new Product
+                    {
+                        Id = product.Id,
+                        Name = product.Name,
+                        Price = product.Price ?? 0
+                    };
+                    for (int i = 0; i < quantity; i++)
+                    {
+                        cart.AddItem(sessionProduct);
+                    }
+                    SaveSessionCart(cart);
+
+                    return Json(new { success = true, message = "Товар добавлен в корзину", cartCount = cart.ItemCount });
+                }
+
+                // Если авторизован - сохраняем в БД
+                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+                if (customer == null)
+                {
+                    customer = new CustomerDb
+                    {
+                        UserId = userId.Value,
+                        Name = HttpContext.Session.GetString("Email") ?? "Пользователь",
+                        BonusBalance = 0
+                    };
+                    _context.Customers.Add(customer);
+                    _context.SaveChanges();
+                }
+
+                var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
+                if (dbCart == null)
+                {
+                    dbCart = new CartDb { CustomerId = customer.Id, CreatedAt = DateTime.UtcNow };
+                    _context.Carts.Add(dbCart);
+                    _context.SaveChanges();
+                }
+
+                // Проверяем если уже такой товар в корзине
+                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == productId);
+                if (cartItem != null)
+                {
+                    cartItem.Quantity += quantity;
+                }
+                else
+                {
+                    cartItem = new CartItemDb
+                    {
+                        CartId = dbCart.Id,
+                        ProductId = productId,
+                        Quantity = quantity,
+                        Price = product.Price ?? 0
+                    };
+                    _context.CartItems.Add(cartItem);
+                }
+
+                _context.SaveChanges();
+                dbCart.UpdatedAt = DateTime.UtcNow;
+                _context.SaveChanges();
+
+                // Считаем товары в корзине
+                var cartCount = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
+
+                return Json(new { success = true, message = "Товар добавлен в корзину", cartCount = cartCount });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Ошибка: {ex.Message}" });
+            }
+        }
+
+        // POST: Cart/RemoveFromCart - удалить товар из корзины
+        [HttpPost]
+        public IActionResult RemoveFromCart(int productId)
+        {
+            try
+            {
+                var userId = HttpContext.Session.GetInt32("UserId");
+
+                if (!userId.HasValue)
+                {
+                    var cart = GetSessionCart();
+                    cart.RemoveItem(productId);
+                    SaveSessionCart(cart);
+                    return Json(new { success = true, cartCount = cart.ItemCount });
+                }
+
+                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+                if (customer == null)
+                    return Json(new { success = false, message = "Покупатель не найден" });
+
+                var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
+                if (dbCart == null)
+                    return Json(new { success = false, message = "Корзина не найдена" });
+
+                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == productId);
+                if (cartItem != null)
+                {
+                    _context.CartItems.Remove(cartItem);
+                    _context.SaveChanges();
+                }
+
+                var cartCount = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
+                return Json(new { success = true, cartCount = cartCount });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Ошибка: {ex.Message}" });
+            }
+        }
+
+        // POST: Cart/ClearCart - очистить корзину
+        [HttpPost]
+        public IActionResult ClearCart()
+        {
+            try
+            {
+                var userId = HttpContext.Session.GetInt32("UserId");
+
+                if (!userId.HasValue)
+                {
+                    SaveSessionCart(new Cart());
+                    return Json(new { success = true });
+                }
+
+                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+                if (customer == null)
+                    return Json(new { success = false });
+
+                var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
+                if (dbCart != null)
+                {
+                    var items = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).ToList();
+                    _context.CartItems.RemoveRange(items);
+                    _context.SaveChanges();
+                }
+
+                return Json(new { success = true });
+            }
+            catch
+            {
+                return Json(new { success = false });
+            }
+        }
+
+        // GET: Cart/GetCartCount - получить количество товаров в корзине (для AJAX)
+        [HttpGet]
+        public IActionResult GetCartCount()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (!userId.HasValue)
+            {
+                var cart = GetSessionCart();
+                return Json(new { count = cart.ItemCount });
+            }
+
+            var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+            if (customer == null)
+                return Json(new { count = 0 });
+
+            var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
+            if (dbCart == null)
+                return Json(new { count = 0 });
+
+            var count = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
+            return Json(new { count = count });
+        }
+
+        // Методы для работы с сессией
+        private Cart GetSessionCart()
+        {
+            var cart = HttpContext.Session.Get<Cart>("cart");
+            return cart ?? new Cart();
+        }
+
+        private void SaveSessionCart(Cart cart)
+        {
+            HttpContext.Session.Set("cart", cart);
+        }
+    }
+}

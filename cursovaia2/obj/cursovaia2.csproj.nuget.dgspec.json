@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj": {}
+    "D:\\работы\\cursovaia315\\cursovaia2\\cursovaia2.csproj": {}
   },
   "projects": {
-    "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj": {
+    "D:\\работы\\cursovaia315\\cursovaia2\\cursovaia2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
+        "projectUniqueName": "D:\\работы\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
         "projectName": "cursovaia2",
-        "projectPath": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
-        "packagesPath": "C:\\Users\\petrb\\.nuget\\packages\\",
-        "outputPath": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\obj\\",
+        "projectPath": "D:\\работы\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
+        "packagesPath": "C:\\Users\\pank\\.nuget\\packages\\",
+        "outputPath": "D:\\работы\\cursovaia315\\cursovaia2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\petrb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pank\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

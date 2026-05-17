@@ -1,0 +1,77 @@
+﻿@{
+	ViewData["Title"] = "Главная страница";
+}
+
+<div class="banner">
+	<h1>🛍️ Добро пожаловать в Stationery Store</h1>
+	<p>Ваш магазин канцелярских товаров с огромным выбором и честными ценами</p>
+</div>
+
+<div class="container">
+	<div class="grid categories">
+		<a href="/Product/Catalog" class="category-card" style="text-decoration: none; color: inherit;">
+			<div style="font-size: 3rem; margin-bottom: 1rem;">📚</div>
+			<h3>Все товары</h3>
+			<p style="color: #666; font-size: 0.9rem;">Полный каталог товаров</p>
+		</a>
+		<a href="/Product/Catalog" class="category-card" style="text-decoration: none; color: inherit;">
+			<div style="font-size: 3rem; margin-bottom: 1rem;">✏️</div>
+			<h3>Ручки</h3>
+			<p style="color: #666; font-size: 0.9rem;">Шариковые, гелевые ручки</p>
+		</a>
+		<a href="/Product/Catalog" class="category-card" style="text-decoration: none; color: inherit;">
+			<div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+			<h3>Тетради</h3>
+			<p style="color: #666; font-size: 0.9rem;">Тетради всех форматов</p>
+		</a>
+		<a href="/Product/Catalog" class="category-card" style="text-decoration: none; color: inherit;">
+			<div style="font-size: 3rem; margin-bottom: 1rem;">📋</div>
+			<h3>Блокноты</h3>
+			<p style="color: #666; font-size: 0.9rem;">Удобные блокноты</p>
+		</a>
+	</div>
+
+	<hr style="margin: 3rem 0;">
+
+	<section style="text-align: center; padding: 3rem 0;">
+		<h2 style="margin-bottom: 2rem;">💡 Почему выбирают нас?</h2>
+		<div class="grid">
+			<div class="card">
+				<div class="card-body">
+					<div style="font-size: 2.5rem; margin-bottom: 1rem;">✓</div>
+					<h5>Низкие цены</h5>
+					<p>Самые конкурентные цены на рынке без скрытых комиссий</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+					<div style="font-size: 2.5rem; margin-bottom: 1rem;">🚚</div>
+					<h5>Быстрая доставка</h5>
+					<p>Доставляем товары в течение 1-7 дней по всему городу</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+					<div style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
+					<h5>Гарантия качества</h5>
+					<p>Гарантируем качество всех товаров и помощь при проблемах</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+					<div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+					<h5>Поддержка 24/7</h5>
+					<p>Всегда готовы помочь с вашими вопросами и проблемами</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr style="margin: 3rem 0;">
+
+	<section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 12px; text-align: center; margin-bottom: 3rem;">
+		<h2 style="margin-bottom: 1rem;">🎁 Начните делать покупки прямо сейчас!</h2>
+		<p style="font-size: 1.1rem; margin-bottom: 2rem;">Откройте для себя наш полный каталог канцелярских товаров</p>
+		<a href="/Product/Catalog" class="btn btn-light btn-lg" style="font-weight: 600;">Перейти в каталог →</a>
+	</section>
+</div>

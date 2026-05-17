@@ -1,0 +1,147 @@
+﻿@{
+    ViewData["Title"] = "Каталог товаров";
+}
+
+@using cursovaia2.ModelsDb;
+
+<div class="container mt-4">
+    <h1>📦 Каталог товаров</h1>
+    <hr>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <div class="row">
+        <!-- Боковая панель с категориями -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">📂 Категории</h5>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="/Product/Catalog" class="list-group-item list-group-item-action">
+                        ✓ Все товары
+                    </a>
+                    @if (Model != null)
+                    {
+                        var categories = Model.GetType().GetProperty("Categories")?.GetValue(Model) as List<CategoryDb>;
+                        if (categories != null)
+                        {
+                            @foreach (var category in categories)
+                            {
+                                var isActive = Model.GetType().GetProperty("SelectedCategoryId")?.GetValue(Model) as int? == category.Id;
+                                <a href="/Product/Catalog?categoryId=@category.Id" 
+                                   class="list-group-item list-group-item-action @(isActive ? "active" : "")">
+                                    @category.Name
+                                </a>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Основной контент с товарами -->
+        <div class="col-md-9">
+            <div class="row">
+                @if (Model != null)
+                {
+                    var products = Model.GetType().GetProperty("Products")?.GetValue(Model) as List<ProductDb>;
+
+                    @if (products != null && products.Count > 0)
+                    {
+                        @foreach (var product in products)
+                        {
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100 shadow-sm product-card">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">@(product.Brand?.Name ?? "—")</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="/Product/Detail/@product.Id" class="text-decoration-none">
+                                                @product.Name
+                                            </a>
+                                        </h5>
+                                        <p class="card-text text-muted">SKU: @product.Sku</p>
+                                        <p class="card-text text-truncate">@(product.Description ?? "Нет описания")</p>
+
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="h5 text-primary mb-0">@product.Price.ToString("C")</span>
+                                            <button class="btn btn-sm btn-primary" onclick="addToCart(@product.Id, 1)">
+                                                🛒 В корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer bg-light">
+                                        <a href="/Product/Detail/@product.Id" class="btn btn-sm btn-outline-primary w-100">
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12">
+                            <div class="alert alert-info" role="alert">
+                                <h4 class="alert-heading">Товаров не найдено</h4>
+                                <p>В этой категории пока нет товаров. Попробуйте выбрать другую категорию.</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .card-header {
+        border-bottom: 2px solid #e0e0e0;
+    }
+</style>
+
+<script>
+    function addToCart(productId, quantity) {
+        fetch('/Cart/AddToCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                productId: productId,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('✅ ' + data.message);
+                updateCartCount(data.cartCount);
+            } else {
+                alert('❌ ' + data.message);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+    function updateCartCount(count) {
+        const cartCountElement = document.querySelector('.cart-count');
+        if (cartCountElement) {
+            cartCountElement.textContent = count;
+        }
+    }
+</script>

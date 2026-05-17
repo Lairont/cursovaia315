@@ -1,0 +1,228 @@
+﻿using cursovaia2.Data;
+using cursovaia2.Models;
+using cursovaia2.ModelsDb;
+using Microsoft.AspNetCore.Mvc;
+
+namespace cursovaia2.Controllers
+{
+    public class ProductController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ProductController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: Product/Catalog
+        public IActionResult Catalog(int? categoryId)
+        {
+            try
+            {
+                var categories = _context.CategoriesDb.ToList();
+                var products = _context.ProductsDb
+                    .Where(p => p.IsActive)
+                    .Include(p => p.Category)
+                    .Include(p => p.Brand)
+                    .ToList();
+
+                // Фильтруем по категории если указана
+                if (categoryId.HasValue)
+                {
+                    products = products.Where(p => p.CategoryId == categoryId).ToList();
+                }
+
+                var viewModel = new
+                {
+                    Categories = categories,
+                    Products = products,
+                    SelectedCategoryId = categoryId
+                };
+
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = $"Ошибка при загрузке товаров: {ex.Message}";
+                return View();
+            }
+        }
+
+        // GET: Product/Detail/5
+        public IActionResult Detail(int id)
+        {
+            try
+            {
+                var product = _context.ProductsDb
+                    .Where(p => p.IsActive)
+                    .Include(p => p.Category)
+                    .Include(p => p.Brand)
+                    .Include(p => p.Images)
+                    .Include(p => p.Attributes)
+                    .FirstOrDefault(p => p.Id == id);
+
+                if (product == null)
+                    return NotFound("Товар не найден");
+
+                return View(product);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = $"Ошибка при загрузке товара: {ex.Message}";
+                return View();
+            }
+        }
+
+        // GET: Product/SearchJson
+        [HttpGet]
+        public IActionResult SearchJson(string? query, int? categoryId)
+        {
+            try
+            {
+                var products = _context.ProductsDb
+                    .Where(p => p.IsActive)
+                    .Include(p => p.Category)
+                    .Include(p => p.Brand)
+                    .ToList();
+
+                if (!string.IsNullOrEmpty(query))
+                {
+                    products = products.Where(p =>
+                        p.Name.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                        p.Description.Contains(query, StringComparison.OrdinalIgnoreCase)
+                    ).ToList();
+                }
+
+                if (categoryId.HasValue)
+                {
+                    products = products.Where(p => p.CategoryId == categoryId).ToList();
+                }
+
+                var result = products.Select(p => new
+                {
+                    p.Id,
+                    p.Name,
+                    p.Price,
+                    p.Sku,
+                    Category = p.Category?.Name,
+                    Brand = p.Brand?.Name
+                }).ToList();
+
+                return Json(result);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { error = ex.Message });
+            }
+        }
+
+        public IActionResult GetFilteredProducts(string? search, string? category, string? sort, decimal? priceMin, decimal? priceMax)
+        {
+            var products = GetAllProducts();
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                products = products.Where(p => p.Name.Contains(search, StringComparison.OrdinalIgnoreCase) ||
+                                               p.Description.Contains(search, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(category))
+            {
+                products = products.Where(p => p.Category.Equals(category, StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            if (priceMin.HasValue)
+            {
+                products = products.Where(p => p.Price >= priceMin.Value).ToList();
+            }
+
+            if (priceMax.HasValue)
+            {
+                products = products.Where(p => p.Price <= priceMax.Value).ToList();
+            }
+
+            products = sort switch
+            {
+                "price-asc" => products.OrderBy(p => p.Price).ToList(),
+                "price-desc" => products.OrderByDescending(p => p.Price).ToList(),
+                "name-desc" => products.OrderByDescending(p => p.Name).ToList(),
+                _ => products.OrderBy(p => p.Name).ToList()
+            };
+
+            return Json(new { success = true, products = products });
+        }
+
+        private List<Category> GetCategories()
+        {
+            return new List<Category>
+            {
+                new() { Id = 1, Name = "Ручки", Icon = "✏️" },
+                new() { Id = 2, Name = "Карандаши", Icon = "📝" },
+                new() { Id = 3, Name = "Тетради", Icon = "📓" },
+                new() { Id = 4, Name = "Блокноты", Icon = "📄" },
+                new() { Id = 5, Name = "Клей и скотч", Icon = "📌" },
+                new() { Id = 6, Name = "Папки и файлы", Icon = "📂" }
+            };
+        }
+
+        private List<Product> GetAllProducts()
+        {
+            return new List<Product>
+            {
+                new() { Id = 1, Name = "Ручка гелевая", Category = "Ручки", Price = 25m, Description = "Удобная ручка" },
+                new() { Id = 2, Name = "Карандаш HB", Category = "Карандаши", Price = 15m, Description = "Простой карандаш" },
+                new() { Id = 3, Name = "Тетрадь A4", Category = "Тетради", Price = 50m, Description = "Школьная тетрадь" }
+            };
+        }
+    }
+}
+        private List<Product> GetAllProducts()
+        {
+            return new List<Product>
+            {
+                new() { Id = 1, Name = "Шариковая ручка Blue", Category = "Ручки", Price = 25, Description = "Удобная шариковая ручка с синей пастой для письма", ImageUrl = "/images/pen1.jpg", Stock = 100 },
+                new() { Id = 2, Name = "Шариковая ручка Red", Category = "Ручки", Price = 25, Description = "Яркая красная ручка для письма", ImageUrl = "/images/pen2.jpg", Stock = 80 },
+                new() { Id = 3, Name = "Гелевая ручка", Category = "Ручки", Price = 35, Description = "Премиум гелевая ручка с плавным письмом", ImageUrl = "/images/pen3.jpg", Stock = 60 },
+                new() { Id = 4, Name = "Ручка-маркер", Category = "Ручки", Price = 45, Description = "Многофункциональная ручка-маркер", ImageUrl = "/images/pen4.jpg", Stock = 50 },
+
+                new() { Id = 5, Name = "Карандаш HB", Category = "Карандаши", Price = 15, Description = "Классический карандаш HB для письма и рисования", ImageUrl = "/images/pencil1.jpg", Stock = 150 },
+                new() { Id = 6, Name = "Цветные карандаши (12 шт)", Category = "Карандаши", Price = 120, Description = "Набор из 12 ярких цветных карандашей", ImageUrl = "/images/pencil2.jpg", Stock = 90 },
+                new() { Id = 7, Name = "Карандаш 2H", Category = "Карандаши", Price = 15, Description = "Твёрдый карандаш для чертежей", ImageUrl = "/images/pencil3.jpg", Stock = 100 },
+                new() { Id = 8, Name = "Механический карандаш", Category = "Карандаши", Price = 55, Description = "Удобный механический карандаш 0.5 мм", ImageUrl = "/images/pencil4.jpg", Stock = 70 },
+
+                new() { Id = 9, Name = "Тетрадь 48 листов", Category = "Тетради", Price = 45, Description = "Качественная тетрадь с плотной белой бумагой", ImageUrl = "/images/notebook1.jpg", Stock = 200 },
+                new() { Id = 10, Name = "Тетрадь 96 листов", Category = "Тетради", Price = 65, Description = "Толстая тетрадь для долгосрочного использования", ImageUrl = "/images/notebook2.jpg", Stock = 150 },
+                new() { Id = 11, Name = "Тетрадь клетка 24 листа", Category = "Тетради", Price = 25, Description = "Компактная тетрадь в клетку", ImageUrl = "/images/notebook3.jpg", Stock = 180 },
+                new() { Id = 12, Name = "Тетрадь линия 24 листа", Category = "Тетради", Price = 25, Description = "Тетрадь в линию для письма", ImageUrl = "/images/notebook4.jpg", Stock = 180 },
+
+                new() { Id = 13, Name = "Блокнот Premium", Category = "Блокноты", Price = 85, Description = "Стильный блокнот премиум класса для заметок", ImageUrl = "/images/notepad1.jpg", Stock = 80 },
+                new() { Id = 14, Name = "Блокнот спиральный", Category = "Блокноты", Price = 65, Description = "Удобный спиральный блокнот", ImageUrl = "/images/notepad2.jpg", Stock = 100 },
+                new() { Id = 15, Name = "Блокнот А5", Category = "Блокноты", Price = 55, Description = "Компактный блокнот формата А5", ImageUrl = "/images/notepad3.jpg", Stock = 120 },
+                new() { Id = 16, Name = "Блокнот с твёрдой обложкой", Category = "Блокноты", Price = 95, Description = "Прочный блокнот с твёрдой обложкой", ImageUrl = "/images/notepad4.jpg", Stock = 60 },
+
+                new() { Id = 17, Name = "Клей ПВА 100мл", Category = "Клей и скотч", Price = 35, Description = "Универсальный клей ПВА для бумаги", ImageUrl = "/images/glue1.jpg", Stock = 110 },
+                new() { Id = 18, Name = "Скотч прозрачный", Category = "Клей и скотч", Price = 25, Description = "Прочный прозрачный скотч 48мм", ImageUrl = "/images/tape1.jpg", Stock = 200 },
+                new() { Id = 19, Name = "Клей-карандаш", Category = "Клей и скотч", Price = 20, Description = "Удобный клей в карандаше", ImageUrl = "/images/glue2.jpg", Stock = 140 },
+                new() { Id = 20, Name = "Скотч двусторонний", Category = "Клей и скотч", Price = 40, Description = "Двусторонний скотч для надёжного крепления", ImageUrl = "/images/tape2.jpg", Stock = 90 },
+
+                new() { Id = 21, Name = "Папка А4", Category = "Папки и файлы", Price = 55, Description = "Стандартная папка для документов А4", ImageUrl = "/images/folder1.jpg", Stock = 150 },
+                new() { Id = 22, Name = "Файлы (100 шт)", Category = "Папки и файлы", Price = 85, Description = "Набор из 100 прозрачных файлов", ImageUrl = "/images/files1.jpg", Stock = 100 },
+                new() { Id = 23, Name = "Папка-скоросшиватель", Category = "Папки и файлы", Price = 45, Description = "Удобная папка со скоросшивателем", ImageUrl = "/images/folder2.jpg", Stock = 120 },
+                new() { Id = 24, Name = "Лоток для бумаги", Category = "Папки и файлы", Price = 75, Description = "Настольный лоток для офисной бумаги", ImageUrl = "/images/tray1.jpg", Stock = 70 }
+            };
+        }
+
+        private List<Category> GetCategories()
+        {
+            return new List<Category>
+            {
+                new() { Id = 1, Name = "Ручки", Icon = "✏️" },
+                new() { Id = 2, Name = "Карандаши", Icon = "📝" },
+                new() { Id = 3, Name = "Тетради", Icon = "📓" },
+                new() { Id = 4, Name = "Блокноты", Icon = "📄" },
+                new() { Id = 5, Name = "Клей и скотч", Icon = "📌" },
+                new() { Id = 6, Name = "Папки и файлы", Icon = "📂" }
+            };
+        }
+    }
+}

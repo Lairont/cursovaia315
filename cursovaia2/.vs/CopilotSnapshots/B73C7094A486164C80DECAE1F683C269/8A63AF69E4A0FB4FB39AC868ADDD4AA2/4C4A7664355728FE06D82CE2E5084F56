@@ -1,0 +1,55 @@
+﻿namespace cursovaia2.Models
+{
+    public class Cart
+    {
+        public List<CartItem> Items { get; set; } = new();
+
+        public int ItemCount => Items.Sum(x => x.Quantity);
+        public decimal Total => Items.Sum(x => x.Total);
+
+        public void AddItem(Product product, int quantity = 1)
+        {
+            var existingItem = Items.FirstOrDefault(x => x.ProductId == product.Id);
+
+            if (existingItem != null)
+            {
+                existingItem.Quantity += quantity;
+            }
+            else
+            {
+                Items.Add(new CartItem
+                {
+                    Id = Items.Count + 1,
+                    ProductId = product.Id,
+                    ProductName = product.Name,
+                    Price = product.Price,
+                    ImageUrl = product.ImageUrl,
+                    Quantity = quantity
+                });
+            }
+        }
+
+        public void RemoveItem(int productId)
+        {
+            var item = Items.FirstOrDefault(x => x.ProductId == productId);
+            if (item != null)
+            {
+                Items.Remove(item);
+            }
+        }
+
+        public void UpdateQuantity(int cartItemId, int quantity)
+        {
+            var item = Items.FirstOrDefault(x => x.Id == cartItemId);
+            if (item != null && quantity > 0)
+            {
+                item.Quantity = quantity;
+            }
+        }
+
+        public void Clear()
+        {
+            Items.Clear();
+        }
+    }
+}

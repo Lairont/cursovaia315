@@ -114,19 +114,70 @@ namespace cursovaia2.Controllers
                 _context.Brands.Add(brand);
                 _context.SaveChanges();
 
-                // Добавляем товар
-                var product = new ProductDb
+                // Добавляем товары
+                var products = new List<ProductDb>
                 {
-                    Name = "Тестовый товар",
-                    Sku = "TEST-001",
-                    CategoryId = category.Id,
-                    BrandId = brand.Id,
-                    Price = 99.99m,
-                    CostPrice = 50m,
-                    Description = "Это тестовый товар для проверки БД",
-                    IsActive = true
+                    new ProductDb
+                    {
+                        Name = "Шариковая ручка синяя",
+                        Sku = "PEN-001",
+                        CategoryId = category.Id,
+                        BrandId = brand.Id,
+                        Price = 25m,
+                        CostPrice = 10m,
+                        Description = "Удобная шариковая ручка с синей пастой",
+                        IsActive = true
+                    },
+                    new ProductDb
+                    {
+                        Name = "Карандаш HB",
+                        Sku = "PENCIL-001",
+                        CategoryId = category.Id,
+                        BrandId = brand.Id,
+                        Price = 15m,
+                        CostPrice = 5m,
+                        Description = "Классический карандаш для письма",
+                        IsActive = true
+                    },
+                    new ProductDb
+                    {
+                        Name = "Тетрадь 48 листов",
+                        Sku = "NOTE-001",
+                        CategoryId = category.Id,
+                        BrandId = brand.Id,
+                        Price = 45m,
+                        CostPrice = 20m,
+                        Description = "Качественная тетрадь с белой бумагой",
+                        IsActive = true
+                    },
+                    new ProductDb
+                    {
+                        Name = "Блокнот премиум",
+                        Sku = "BLOCK-001",
+                        CategoryId = category.Id,
+                        BrandId = brand.Id,
+                        Price = 85m,
+                        CostPrice = 40m,
+                        Description = "Стильный блокнот премиум класса",
+                        IsActive = true
+                    },
+                    new ProductDb
+                    {
+                        Name = "Клей ПВА 100ml",
+                        Sku = "GLUE-001",
+                        CategoryId = category.Id,
+                        BrandId = brand.Id,
+                        Price = 35m,
+                        CostPrice = 15m,
+                        Description = "Универсальный клей для бумаги",
+                        IsActive = true
+                    }
                 };
-                _context.ProductsDb.Add(product);
+
+                foreach (var p in products)
+                {
+                    _context.ProductsDb.Add(p);
+                }
                 _context.SaveChanges();
 
                 var result = "<h2>✅ Тестовые данные успешно добавлены!</h2>";
@@ -139,10 +190,15 @@ namespace cursovaia2.Controllers
                 result += $"<li>✓ Покупатель: Тестовый покупатель</li>";
                 result += $"<li>✓ Категория: Тестовая категория</li>";
                 result += $"<li>✓ Бренд: Тестовый бренд</li>";
-                result += $"<li>✓ Товар: Тестовый товар (99.99 руб.)</li>";
+                result += $"<li>✓ Добавлено товаров: {products.Count} шт.</li>";
                 result += "</ul>";
                 result += "<hr>";
-                result += "<p><a href='/Test/CheckDatabase'>← Проверить результаты</a></p>";
+                result += "<h3>🛍️ Навигация:</h3>";
+                result += "<ul>";
+                result += $"<li><a href='/Product/Catalog'>🛒 Перейти в каталог товаров</a></li>";
+                result += $"<li><a href='/Test/CheckDatabase'>📊 Проверить БД</a></li>";
+                result += $"<li><a href='/'>🏠 На главную</a></li>";
+                result += "</ul>";
 
                 return Content(result, "text/html; charset=utf-8");
             }

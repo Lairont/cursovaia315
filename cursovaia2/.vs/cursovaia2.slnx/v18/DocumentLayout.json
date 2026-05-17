@@ -1,7 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\",
+  "WorkspaceRootPath": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\testing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:testing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1086305448\\ProductController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\checkout\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\checkout\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1782350227\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\petrb\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1841429884\\Catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -9,250 +47,282 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\petrb\\.copilot\\plans\\plan-untitled.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\petrb\\.copilot\\plans\\plan-entity-framework-core.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\\u043C\u0438\u0433\u0440\u0430\u0446\u0438\u044F_\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\\u043C\u0438\u0433\u0440\u0430\u0446\u0438\u044F_\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:\u043C\u0438\u0433\u0440\u0430\u0446\u0438\u044F_\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\testing_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\testing_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:testing_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\testing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:testing.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\technical_details.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\technical_details.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:technical_details.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\readme_implementation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\readme_implementation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:readme_implementation.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\files_list.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\files_list.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:files_list.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\project_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\project_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:project_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\requirements.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\requirements.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:requirements.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\developer_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\developer_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:developer_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:architecture.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\services\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\services\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:services\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\cart\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\cart\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\orderconfirmed.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\userdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\categorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\roledb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\roledb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\roledb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\customerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\customerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\customerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\branddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\branddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\branddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\productimagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\productimagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\productimagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\productattributedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\productattributedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\productattributedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\orderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\orderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\orderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\orderitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\orderitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\orderitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\paymentmethoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\paymentmethoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\paymentmethoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\paymentdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\paymentdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\paymentdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\deliverymethoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\deliverymethoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\deliverymethoddb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\deliverydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\deliverydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\deliverydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\discountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\promocodedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\promocodedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\promocodedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\productdiscountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\productdiscountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\productdiscountdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\cartdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\cartdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\cartdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\cartitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\cartitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\cartitemdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\reviewdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\reviewdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\reviewdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\modelsdb\\wishlistdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\modelsdb\\wishlistdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:modelsdb\\wishlistdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\cursovaia2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:cursovaia2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\product\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\product\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\petrb\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1841429884\\Detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|f:\\visual studio\\job\\practica\\cursovaia315\\cursovaia2\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1086305448\\CartController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\checkout\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\checkout\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\438906048\\Catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\product\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\product\\catalog.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\438906048\\Detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\product\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1161858978\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\readme_ru.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:readme_ru.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\implementation_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:implementation_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\getting_started.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:getting_started.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\routes_map.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:routes_map.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\tech_stack.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:tech_stack.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\project_complete.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:project_complete.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\final_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:final_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|d:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\documentation_index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EBE1929-6398-FEDF-2E2A-87E20D7F2B47}|cursovaia2.csproj|solutionrelative:documentation_index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -262,80 +332,394 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-16T17:35:17.28Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Product\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Views\\Product\\Detail.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Product\\Detail.cshtml",
-              "RelativeToolTip": "Views\\Product\\Detail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T10:58:53.099Z",
+              "DocumentIndex": 75,
+              "Title": "QUICKSTART.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\QUICKSTART.md",
+              "RelativeDocumentMoniker": "QUICKSTART.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\QUICKSTART.md",
+              "RelativeToolTip": "QUICKSTART.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:21:56.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T07:10:15.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TestController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\TestController.cs",
+              "RelativeToolTip": "Controllers\\TestController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T10:35:30.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "TECH_STACK.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TECH_STACK.md",
+              "RelativeDocumentMoniker": "TECH_STACK.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TECH_STACK.md",
+              "RelativeToolTip": "TECH_STACK.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:24:52.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TESTING.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TESTING.md",
+              "RelativeDocumentMoniker": "TESTING.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TESTING.md",
+              "RelativeToolTip": "TESTING.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-05T07:17:38.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-08T21:08:42.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "IMPLEMENTATION_SUMMARY.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\IMPLEMENTATION_SUMMARY.md",
+              "RelativeDocumentMoniker": "IMPLEMENTATION_SUMMARY.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\IMPLEMENTATION_SUMMARY.md",
+              "RelativeToolTip": "IMPLEMENTATION_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:22:19.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-14T17:10:37.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "GETTING_STARTED.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\GETTING_STARTED.md",
+              "RelativeDocumentMoniker": "GETTING_STARTED.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\GETTING_STARTED.md",
+              "RelativeToolTip": "GETTING_STARTED.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:24:07.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "ROUTES_MAP.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ROUTES_MAP.md",
+              "RelativeDocumentMoniker": "ROUTES_MAP.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ROUTES_MAP.md",
+              "RelativeToolTip": "ROUTES_MAP.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:24:26.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "DOCUMENTATION_INDEX.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\DOCUMENTATION_INDEX.md",
+              "RelativeDocumentMoniker": "DOCUMENTATION_INDEX.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\DOCUMENTATION_INDEX.md",
+              "RelativeToolTip": "DOCUMENTATION_INDEX.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:28:00.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "FINAL_SUMMARY.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\FINAL_SUMMARY.md",
+              "RelativeDocumentMoniker": "FINAL_SUMMARY.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\FINAL_SUMMARY.md",
+              "RelativeToolTip": "FINAL_SUMMARY.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:27:14.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "PROJECT_COMPLETE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\PROJECT_COMPLETE.md",
+              "RelativeDocumentMoniker": "PROJECT_COMPLETE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\PROJECT_COMPLETE.md",
+              "RelativeToolTip": "PROJECT_COMPLETE.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:25:24.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "README_RU.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\README_RU.md",
+              "RelativeDocumentMoniker": "README_RU.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\README_RU.md",
+              "RelativeToolTip": "README_RU.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-05-16T17:20:56.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T10:51:30.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1086305448\\ProductController.cs",
+              "ToolTip": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1086305448\\ProductController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T10:51:23.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderConfirmed.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Checkout\\OrderConfirmed.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\OrderConfirmed.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Checkout\\OrderConfirmed.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\OrderConfirmed.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:47:48.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Checkout\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Index.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Checkout\\Index.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Index.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAIBJwN4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:47:41.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CheckoutController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAABBwK0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T10:47:26.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Controllers\\CartController.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAABBwBsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T10:47:17.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1086305448\\CartController.cs",
+              "ToolTip": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1086305448\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T10:47:04.286Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 62,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAIBJwK0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:45:20.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1782350227\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1782350227\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:45:02.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAIBJwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:49:23.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1161858978\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1161858978\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:49:14.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Product\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Detail.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Product\\Detail.cshtml",
+              "RelativeToolTip": "Views\\Product\\Detail.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAABRwNsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:48:31.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\438906048\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\438906048\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:48:16.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Catalog.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Product\\Catalog.cshtml",
+              "RelativeDocumentMoniker": "Views\\Product\\Catalog.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Product\\Catalog.cshtml",
+              "RelativeToolTip": "Views\\Product\\Catalog.cshtml",
+              "ViewState": "AgIAANMAAAAAAAAAAIBJwNYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:48:13.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Catalog.cshtml",
+              "DocumentMoniker": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\438906048\\Catalog.cshtml",
+              "ToolTip": "C:\\Users\\pank\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\438906048\\Catalog.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:48:00.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Checkout\\Orders.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Orders.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Checkout\\Orders.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Orders.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAIBJwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:47:55.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\petrb\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1841429884\\Detail.cshtml",
               "ToolTip": "C:\\Users\\petrb\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1841429884\\Detail.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T10:58:34.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T10:58:34.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "Catalog.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Product\\Catalog.cshtml",
-              "RelativeDocumentMoniker": "Views\\Product\\Catalog.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Product\\Catalog.cshtml",
-              "RelativeToolTip": "Views\\Product\\Catalog.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T10:58:22.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Catalog.cshtml",
               "DocumentMoniker": "C:\\Users\\petrb\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1841429884\\Catalog.cshtml",
               "ToolTip": "C:\\Users\\petrb\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\1841429884\\Catalog.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T10:58:10.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestController.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\TestController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TestController.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\TestController.cs",
-              "RelativeToolTip": "Controllers\\TestController.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAwwAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T10:35:30.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T10:58:10.103Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 45,
               "Title": "ProductImageDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductImageDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductImageDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\ProductImageDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductImageDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductImageDb.cs",
               "RelativeToolTip": "ModelsDb\\ProductImageDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -345,9 +729,9 @@
               "$type": "Document",
               "DocumentIndex": 44,
               "Title": "BrandDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\BrandDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\BrandDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\BrandDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\BrandDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\BrandDb.cs",
               "RelativeToolTip": "ModelsDb\\BrandDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -357,9 +741,9 @@
               "$type": "Document",
               "DocumentIndex": 43,
               "Title": "CustomerDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CustomerDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CustomerDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\CustomerDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CustomerDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CustomerDb.cs",
               "RelativeToolTip": "ModelsDb\\CustomerDb.cs",
               "ViewState": "AgIAACAAAAAAAAAAAIBHwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -369,9 +753,9 @@
               "$type": "Document",
               "DocumentIndex": 42,
               "Title": "RoleDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\RoleDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\RoleDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\RoleDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\RoleDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\RoleDb.cs",
               "RelativeToolTip": "ModelsDb\\RoleDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -379,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "plan-entity-framework-core.md [\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F \u0432\u0435\u0440\u0441\u0438\u044F]",
               "DocumentMoniker": "C:\\Users\\petrb\\.copilot\\plans\\plan-entity-framework-core.md",
               "ToolTip": "C:\\Users\\petrb\\.copilot\\plans\\plan-entity-framework-core.md [\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F \u0432\u0435\u0440\u0441\u0438\u044F]",
@@ -389,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "plan-untitled.md [\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F \u0432\u0435\u0440\u0441\u0438\u044F]",
               "DocumentMoniker": "C:\\Users\\petrb\\.copilot\\plans\\plan-untitled.md",
               "ToolTip": "C:\\Users\\petrb\\.copilot\\plans\\plan-untitled.md [\u041F\u0440\u0435\u0434\u0432\u0430\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F \u0432\u0435\u0440\u0441\u0438\u044F]",
@@ -401,9 +785,9 @@
               "$type": "Document",
               "DocumentIndex": 46,
               "Title": "ProductAttributeDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductAttributeDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductAttributeDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\ProductAttributeDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductAttributeDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductAttributeDb.cs",
               "RelativeToolTip": "ModelsDb\\ProductAttributeDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -413,9 +797,9 @@
               "$type": "Document",
               "DocumentIndex": 47,
               "Title": "OrderDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\OrderDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\OrderDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\OrderDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\OrderDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\OrderDb.cs",
               "RelativeToolTip": "ModelsDb\\OrderDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -425,9 +809,9 @@
               "$type": "Document",
               "DocumentIndex": 60,
               "Title": "cursovaia2.csproj",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
               "RelativeDocumentMoniker": "cursovaia2.csproj",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\cursovaia2.csproj",
               "RelativeToolTip": "cursovaia2.csproj",
               "ViewState": "AgIAAA0AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -437,9 +821,9 @@
               "$type": "Document",
               "DocumentIndex": 59,
               "Title": "WishlistDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\WishlistDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\WishlistDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\WishlistDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\WishlistDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\WishlistDb.cs",
               "RelativeToolTip": "ModelsDb\\WishlistDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -449,9 +833,9 @@
               "$type": "Document",
               "DocumentIndex": 58,
               "Title": "ReviewDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ReviewDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ReviewDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\ReviewDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ReviewDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ReviewDb.cs",
               "RelativeToolTip": "ModelsDb\\ReviewDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -461,9 +845,9 @@
               "$type": "Document",
               "DocumentIndex": 57,
               "Title": "CartItemDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CartItemDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CartItemDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\CartItemDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CartItemDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CartItemDb.cs",
               "RelativeToolTip": "ModelsDb\\CartItemDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -473,9 +857,9 @@
               "$type": "Document",
               "DocumentIndex": 56,
               "Title": "CartDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CartDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CartDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\CartDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CartDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CartDb.cs",
               "RelativeToolTip": "ModelsDb\\CartDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -485,9 +869,9 @@
               "$type": "Document",
               "DocumentIndex": 55,
               "Title": "ProductDiscountDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDiscountDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDiscountDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\ProductDiscountDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDiscountDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDiscountDb.cs",
               "RelativeToolTip": "ModelsDb\\ProductDiscountDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -497,9 +881,9 @@
               "$type": "Document",
               "DocumentIndex": 54,
               "Title": "PromoCodeDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\PromoCodeDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\PromoCodeDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\PromoCodeDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\PromoCodeDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\PromoCodeDb.cs",
               "RelativeToolTip": "ModelsDb\\PromoCodeDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -509,9 +893,9 @@
               "$type": "Document",
               "DocumentIndex": 53,
               "Title": "DiscountDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\DiscountDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\DiscountDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\DiscountDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\DiscountDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\DiscountDb.cs",
               "RelativeToolTip": "ModelsDb\\DiscountDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -521,9 +905,9 @@
               "$type": "Document",
               "DocumentIndex": 52,
               "Title": "DeliveryDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\DeliveryDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryDb.cs",
               "RelativeToolTip": "ModelsDb\\DeliveryDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -533,9 +917,9 @@
               "$type": "Document",
               "DocumentIndex": 51,
               "Title": "DeliveryMethodDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryMethodDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryMethodDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\DeliveryMethodDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryMethodDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\DeliveryMethodDb.cs",
               "RelativeToolTip": "ModelsDb\\DeliveryMethodDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -545,9 +929,9 @@
               "$type": "Document",
               "DocumentIndex": 50,
               "Title": "PaymentDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\PaymentDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentDb.cs",
               "RelativeToolTip": "ModelsDb\\PaymentDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -557,9 +941,9 @@
               "$type": "Document",
               "DocumentIndex": 49,
               "Title": "PaymentMethodDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentMethodDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentMethodDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\PaymentMethodDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentMethodDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\PaymentMethodDb.cs",
               "RelativeToolTip": "ModelsDb\\PaymentMethodDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -569,9 +953,9 @@
               "$type": "Document",
               "DocumentIndex": 48,
               "Title": "OrderItemDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\OrderItemDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\OrderItemDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\OrderItemDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\OrderItemDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\OrderItemDb.cs",
               "RelativeToolTip": "ModelsDb\\OrderItemDb.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -581,9 +965,9 @@
               "$type": "Document",
               "DocumentIndex": 41,
               "Title": "Register.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Account\\Register.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Account\\Register.cshtml",
               "RelativeToolTip": "Views\\Account\\Register.cshtml",
               "ViewState": "AgIAABMAAAAAAAAAAIBJwFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -592,22 +976,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 40,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-14T17:10:37.965Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAIBJwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -615,11 +987,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
               "RelativeDocumentMoniker": "\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
               "RelativeToolTip": "\u041C\u0418\u0413\u0420\u0410\u0426\u0418\u042F_\u0418\u041D\u0421\u0422\u0420\u0423\u041A\u0426\u0418\u042F.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
@@ -627,11 +999,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "CategoryDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CategoryDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CategoryDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\CategoryDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\CategoryDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\CategoryDb.cs",
               "RelativeToolTip": "ModelsDb\\CategoryDb.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAABQwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -639,11 +1011,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "UserDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\UserDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\UserDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\UserDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\UserDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\UserDb.cs",
               "RelativeToolTip": "ModelsDb\\UserDb.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAIBHwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -651,11 +1023,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAEBUwKQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -663,35 +1035,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-08T21:08:42.564Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T07:11:11.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "TESTING_GUIDE.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\TESTING_GUIDE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TESTING_GUIDE.md",
               "RelativeDocumentMoniker": "TESTING_GUIDE.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\TESTING_GUIDE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TESTING_GUIDE.md",
               "RelativeToolTip": "TESTING_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAM4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -699,11 +1047,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ProductDb.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDb.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDb.cs",
               "RelativeDocumentMoniker": "ModelsDb\\ProductDb.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDb.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ModelsDb\\ProductDb.cs",
               "RelativeToolTip": "ModelsDb\\ProductDb.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAABQwDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -711,11 +1059,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "README.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\README.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\README.md",
               "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\README.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\README.md",
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -723,35 +1071,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "QUICKSTART.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\QUICKSTART.md",
-              "RelativeDocumentMoniker": "QUICKSTART.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\QUICKSTART.md",
-              "RelativeToolTip": "QUICKSTART.md",
-              "ViewState": "AgIAAAkAAAAAAAAAAIBJwBUBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-05-05T07:15:32.911Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TESTING.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\TESTING.md",
-              "RelativeDocumentMoniker": "TESTING.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\TESTING.md",
-              "RelativeToolTip": "TESTING.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOYBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-05-05T07:17:38.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "SUMMARY.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\SUMMARY.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\SUMMARY.md",
               "RelativeDocumentMoniker": "SUMMARY.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\SUMMARY.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\SUMMARY.md",
               "RelativeToolTip": "SUMMARY.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -759,11 +1083,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAADAAAAAAAAAAAIBZwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -771,11 +1095,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Product.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\Product.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\Product.cs",
               "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\Product.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\Product.cs",
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -783,11 +1107,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "CartItem.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\CartItem.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "Models\\CartItem.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\CartItem.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\CartItem.cs",
               "RelativeToolTip": "Models\\CartItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -795,11 +1119,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "README_IMPLEMENTATION.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\README_IMPLEMENTATION.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\README_IMPLEMENTATION.md",
               "RelativeDocumentMoniker": "README_IMPLEMENTATION.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\README_IMPLEMENTATION.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\README_IMPLEMENTATION.md",
               "RelativeToolTip": "README_IMPLEMENTATION.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -807,11 +1131,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "TECHNICAL_DETAILS.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\TECHNICAL_DETAILS.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TECHNICAL_DETAILS.md",
               "RelativeDocumentMoniker": "TECHNICAL_DETAILS.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\TECHNICAL_DETAILS.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\TECHNICAL_DETAILS.md",
               "RelativeToolTip": "TECHNICAL_DETAILS.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -819,23 +1143,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Cart.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\Cart.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\Cart.cs",
               "RelativeDocumentMoniker": "Models\\Cart.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\Cart.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\Cart.cs",
               "RelativeToolTip": "Models\\Cart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAIBQwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T07:09:32.029Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "Category.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\Category.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Models\\Category.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Models\\Category.cs",
               "RelativeToolTip": "Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -843,49 +1167,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAABBwOQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T07:09:55.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CartController.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Controllers\\CartController.cs",
-              "RelativeToolTip": "Controllers\\CartController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAABBwIIBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T07:10:11.186Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAIBJwAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T07:10:15.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "FILES_LIST.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\FILES_LIST.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\FILES_LIST.md",
               "RelativeDocumentMoniker": "FILES_LIST.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\FILES_LIST.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\FILES_LIST.md",
               "RelativeToolTip": "FILES_LIST.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -893,11 +1179,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "PROJECT_SUMMARY.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\PROJECT_SUMMARY.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\PROJECT_SUMMARY.md",
               "RelativeDocumentMoniker": "PROJECT_SUMMARY.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\PROJECT_SUMMARY.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\PROJECT_SUMMARY.md",
               "RelativeToolTip": "PROJECT_SUMMARY.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -905,11 +1191,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "REQUIREMENTS.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\REQUIREMENTS.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\REQUIREMENTS.md",
               "RelativeDocumentMoniker": "REQUIREMENTS.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\REQUIREMENTS.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\REQUIREMENTS.md",
               "RelativeToolTip": "REQUIREMENTS.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -917,11 +1203,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "DEVELOPER_GUIDE.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\DEVELOPER_GUIDE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\DEVELOPER_GUIDE.md",
               "RelativeDocumentMoniker": "DEVELOPER_GUIDE.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\DEVELOPER_GUIDE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\DEVELOPER_GUIDE.md",
               "RelativeToolTip": "DEVELOPER_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -929,11 +1215,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ARCHITECTURE.md",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ARCHITECTURE.md",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ARCHITECTURE.md",
               "RelativeDocumentMoniker": "ARCHITECTURE.md",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\ARCHITECTURE.md",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\ARCHITECTURE.md",
               "RelativeToolTip": "ARCHITECTURE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -941,11 +1227,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "SessionExtensions.cs",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Services\\SessionExtensions.cs",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Services\\SessionExtensions.cs",
               "RelativeDocumentMoniker": "Services\\SessionExtensions.cs",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Services\\SessionExtensions.cs",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Services\\SessionExtensions.cs",
               "RelativeToolTip": "Services\\SessionExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -953,11 +1239,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -965,11 +1251,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "OrderConfirmed.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Cart\\OrderConfirmed.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Cart\\OrderConfirmed.cshtml",
               "RelativeDocumentMoniker": "Views\\Cart\\OrderConfirmed.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Cart\\OrderConfirmed.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Cart\\OrderConfirmed.cshtml",
               "RelativeToolTip": "Views\\Cart\\OrderConfirmed.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -977,11 +1263,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "Checkout.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Cart\\Checkout.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Cart\\Checkout.cshtml",
               "RelativeDocumentMoniker": "Views\\Cart\\Checkout.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Cart\\Checkout.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Cart\\Checkout.cshtml",
               "RelativeToolTip": "Views\\Cart\\Checkout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -989,23 +1275,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Cart\\Index.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "Views\\Cart\\Index.cshtml",
-              "ViewState": "AgIAAK8AAAAAAAAAAIBZwOkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-05T07:12:06.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Contacts.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Home\\Contacts.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Home\\Contacts.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Contacts.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Home\\Contacts.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Home\\Contacts.cshtml",
               "RelativeToolTip": "Views\\Home\\Contacts.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1013,11 +1287,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "About.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Home\\About.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Home\\About.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Home\\About.cshtml",
               "RelativeToolTip": "Views\\Home\\About.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -1025,13 +1299,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "F:\\Visual Studio\\job\\practica\\cursovaia315\\cursovaia2\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\\u0440\u0430\u0431\u043E\u0442\u044B\\cursovaia315\\cursovaia2\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEsCAAAAAAAAAIBJwAEAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAE4CAAAAAAAAAABRwAEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-05-05T07:10:39.452Z"
             }

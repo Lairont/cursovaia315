@@ -1,0 +1,173 @@
+﻿using cursovaia2.Data;
+using cursovaia2.Models;
+using cursovaia2.ModelsDb;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace cursovaia2.Controllers
+{
+    public class CheckoutController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        public CheckoutController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: Checkout/Index - страница оформления заказа
+        public IActionResult Index()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (!userId.HasValue)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+            if (customer == null)
+            {
+                return RedirectToAction("Index", "Cart");
+            }
+
+            var dbCart = _context.Carts
+                .Include(c => c.Items)
+                .ThenInclude(ci => ci.Product)
+                .FirstOrDefault(c => c.CustomerId == customer.Id);
+
+            if (dbCart == null || !dbCart.Items.Any())
+            {
+                return RedirectToAction("Index", "Cart");
+            }
+
+            // Преобразуем в модель Cart
+            var cart = new Cart();
+            foreach (var item in dbCart.Items)
+            {
+                var product = new Product
+                {
+                    Id = item.Product.Id,
+                    Name = item.Product.Name,
+                    Price = item.Product.Price ?? 0
+                };
+                for (int i = 0; i < item.Quantity; i++)
+                {
+                    cart.AddItem(product);
+                }
+            }
+
+            ViewBag.Customer = customer;
+            ViewBag.CustomerId = customer.Id;
+            ViewBag.CartId = dbCart.Id;
+            return View(cart);
+        }
+
+        // POST: Checkout/PlaceOrder - оформить заказ
+        [HttpPost]
+        public IActionResult PlaceOrder(CheckoutModel model)
+        {
+            try
+            {
+                var userId = HttpContext.Session.GetInt32("UserId");
+
+                if (!userId.HasValue)
+                    return Json(new { success = false, message = "Не авторизован" });
+
+                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+                if (customer == null)
+                    return Json(new { success = false, message = "Покупатель не найден" });
+
+                var dbCart = _context.Carts
+                    .Include(c => c.Items)
+                    .FirstOrDefault(c => c.CustomerId == customer.Id);
+
+                if (dbCart == null || !dbCart.Items.Any())
+                    return Json(new { success = false, message = "Корзина пуста" });
+
+                // Создаём заказ
+                var order = new OrderDb
+                {
+                    CustomerId = customer.Id,
+                    Status = "pending",
+                    FinalPrice = dbCart.Items.Sum(i => (i.Price * i.Quantity)),
+                    TotalPrice = dbCart.Items.Sum(i => (i.Price * i.Quantity))
+                };
+
+                _context.Orders.Add(order);
+                _context.SaveChanges();
+
+                // Добавляем товары в заказ
+                foreach (var cartItem in dbCart.Items)
+                {
+                    var orderItem = new OrderItemDb
+                    {
+                        OrderId = order.Id,
+                        ProductId = cartItem.ProductId,
+                        Quantity = cartItem.Quantity,
+                        Price = cartItem.Price
+                    };
+                    _context.OrderItems.Add(orderItem);
+                }
+
+                // Очищаем корзину
+                _context.CartItems.RemoveRange(dbCart.Items);
+                _context.SaveChanges();
+
+                // Обновляем время обновления корзины
+                dbCart.UpdatedAt = DateTime.UtcNow;
+                _context.SaveChanges();
+
+                return Json(new { success = true, orderId = order.Id, message = "Заказ успешно оформлен" });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Ошибка: {ex.Message}" });
+            }
+        }
+
+        // GET: Checkout/OrderConfirmed - подтверждение заказа
+        public IActionResult OrderConfirmed(int orderId)
+        {
+            var order = _context.Orders
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .FirstOrDefault(o => o.Id == orderId);
+
+            if (order == null)
+                return RedirectToAction("Index", "Home");
+
+            return View(order);
+        }
+
+        // GET: Checkout/Orders - список заказов пользователя
+        public IActionResult Orders()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+
+            if (!userId.HasValue)
+                return RedirectToAction("Login", "Account");
+
+            var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+            if (customer == null)
+                return RedirectToAction("Index", "Home");
+
+            var orders = _context.Orders
+                .Where(o => o.CustomerId == customer.Id)
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .OrderByDescending(o => o.CreatedAt)
+                .ToList();
+
+            return View(orders);
+        }
+    }
+
+    public class CheckoutModel
+    {
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string PostalCode { get; set; }
+        public string Phone { get; set; }
+    }
+}
