@@ -2,172 +2,245 @@
 @model Cart
 
 @{
-	ViewData["Title"] = "Корзина";
+    ViewData["Title"] = "Корзина";
 }
 
-<div class="container mt-4">
-	<h1>🛒 Ваша корзина</h1>
-	<hr>
+<div class="container mt-5">
+    <!-- Заголовок -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-5">🛒 Ваша корзина</h1>
+            <p class="text-muted">Проверьте ваши товары перед оформлением заказа</p>
+        </div>
+    </div>
 
-	@if (Model != null && Model.Items.Any())
-	{
-		<div class="row">
-			<!-- Товары в корзине -->
-			<div class="col-md-8">
-				<div class="card">
-					<div class="card-body">
-						<table class="table table-hover">
-							<thead style="background-color: #f8f9fa;">
-								<tr>
-									<th>Товар</th>
-									<th style="width: 100px;">Цена</th>
-									<th style="width: 100px;">Кол-во</th>
-									<th style="width: 100px;">Сумма</th>
-									<th style="width: 80px;"></th>
-								</tr>
-							</thead>
-							<tbody>
-								@foreach (var item in Model.Items)
-								{
-									<tr>
-										<td>
-											<div class="d-flex align-items-center gap-2">
-												<span style="font-size: 24px;">📦</span>
-												<div>
-													<p class="mb-0 fw-bold">@item.ProductName</p>
-													<a href="/Product/Detail/@item.ProductId" class="text-decoration-none text-muted" style="font-size: 0.9rem;">
-														Подробнее →
-													</a>
-												</div>
-											</div>
-										</td>
-										<td class="text-end">@item.Price.ToString("C")</td>
-										<td class="text-center">
-											<span class="badge bg-primary">@item.Quantity</span>
-										</td>
-										<td class="text-end fw-bold text-primary">@(item.Price * item.Quantity).ToString("C")</td>
-										<td>
-											<button class="btn btn-sm btn-danger" onclick="removeFromCart(@item.ProductId)">
-												🗑️
-											</button>
-										</td>
-									</tr>
-								}
-							</tbody>
-						</table>
-					</div>
-				</div>
+    @if (Model != null && Model.Items.Any())
+    {
+        <div class="row">
+            <!-- Левая часть - товары -->
+            <div class="col-lg-8 mb-4">
+                <div class="card" style="border: none; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div class="card-header" style="background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%); color: white; border-radius: 12px 12px 0 0; padding: 15px 20px;">
+                        <h5 class="mb-0">📦 Товары в корзине (@Model.Items.Count шт.)</h5>
+                    </div>
 
-				<!-- Действия -->
-				<div class="mt-3 d-flex gap-2">
-					<a href="/Product/Catalog" class="btn btn-outline-secondary">
-						← Продолжить покупки
-					</a>
-					<button class="btn btn-outline-danger" onclick="clearCart()">
-						🗑️ Очистить корзину
-					</button>
-				</div>
-			</div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table cart-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50%;">Товар</th>
+                                        <th style="width: 15%; text-align: right;">Цена</th>
+                                        <th style="width: 15%; text-align: center;">Кол-во</th>
+                                        <th style="width: 15%; text-align: right;">Сумма</th>
+                                        <th style="width: 5%;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Items)
+                                    {
+                                        <tr style="border-bottom: 1px solid #e9ecef;">
+                                            <td style="padding: 15px;">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="cart-item-image">
+                                                        📦
+                                                    </div>
+                                                    <div>
+                                                        <p class="mb-1 fw-600" style="font-size: 14px;">
+                                                            <a href="/Product/Detail/@item.ProductId" class="text-decoration-none text-dark">
+                                                                @item.ProductName
+                                                            </a>
+                                                        </p>
+                                                        <small class="text-muted">
+                                                            SKU: @item.ProductId
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td style="padding: 15px; text-align: right;">
+                                                <strong>@item.Price.ToString("C")</strong>
+                                            </td>
+                                            <td style="padding: 15px; text-align: center;">
+                                                <div class="input-group" style="width: 90px; margin: 0 auto;">
+                                                    <button class="btn btn-sm btn-outline-secondary" type="button" onclick="updateQuantity(@item.ProductId, @(item.Quantity - 1))">−</button>
+                                                    <input type="text" class="form-control form-control-sm text-center" value="@item.Quantity" readonly style="border: 1px solid #dee2e6;">
+                                                    <button class="btn btn-sm btn-outline-secondary" type="button" onclick="updateQuantity(@item.ProductId, @(item.Quantity + 1))">+</button>
+                                                </div>
+                                            </td>
+                                            <td style="padding: 15px; text-align: right;">
+                                                <strong class="text-primary" style="font-size: 16px;">
+                                                    @(item.Price * item.Quantity).ToString("C")
+                                                </strong>
+                                            </td>
+                                            <td style="padding: 15px; text-align: center;">
+                                                <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart(@item.ProductId)" title="Удалить">
+                                                    🗑️
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-			<!-- Итого -->
-			<div class="col-md-4">
-				<div class="card sticky-top" style="top: 20px;">
-					<div class="card-header bg-primary text-white">
-						<h5 class="mb-0">💰 Итого</h5>
-					</div>
-					<div class="card-body">
-						<div class="d-flex justify-content-between mb-2">
-							<span>Товаров:</span>
-							<strong>@Model.ItemCount шт.</strong>
-						</div>
-						<div class="d-flex justify-content-between mb-2">
-							<span>Сумма:</span>
-							<strong>@Model.Total.ToString("C")</strong>
-						</div>
-						<hr>
-						<div class="d-flex justify-content-between mb-3">
-							<h5>Итого:</h5>
-							<h5 class="text-primary">@Model.Total.ToString("C")</h5>
-						</div>
+                <!-- Кнопки действий -->
+                <div class="mt-3 d-flex gap-2">
+                    <a href="/Product/Catalog" class="btn btn-outline-secondary" style="border-radius: 8px;">
+                        ← Продолжить покупки
+                    </a>
+                    <button class="btn btn-outline-danger" onclick="if(confirm('Вы уверены?')) { clearCart(); }" style="border-radius: 8px;">
+                        🗑️ Очистить корзину
+                    </button>
+                </div>
+            </div>
 
-						<a href="/Checkout/Index" class="btn btn-primary w-100 mb-2">
-							✓ Оформить заказ
-						</a>
-						<a href="/Product/Catalog" class="btn btn-outline-primary w-100">
-							← Вернуться в каталог
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	}
-	else
-	{
-		<div class="alert alert-info mt-4" role="alert">
-			<h4 class="alert-heading">🛒 Корзина пуста</h4>
-			<p>Похоже, вы еще ничего не добавили в корзину.</p>
-			<hr>
-			<p class="mb-0">
-				<a href="/Product/Catalog" class="btn btn-primary">
-					Перейти в каталог товаров →
-				</a>
-			</p>
-		</div>
-	}
+            <!-- Правая часть - итого -->
+            <div class="col-lg-4">
+                <div class="cart-total-card" style="position: sticky; top: 20px;">
+                    <div class="card-body">
+                        <h5 class="mb-4">💰 Итоговая сумма</h5>
+
+                        <div class="cart-total-row">
+                            <span>Товаров:</span>
+                            <strong>@Model.Items.Count шт.</strong>
+                        </div>
+
+                        <div class="cart-total-row">
+                            <span>Сумма товаров:</span>
+                            <strong>@Model.Total.ToString("C")</strong>
+                        </div>
+
+                        <div class="cart-total-row">
+                            <span>Доставка:</span>
+                            <strong>Бесплатно</strong>
+                        </div>
+
+                        <div class="cart-total-row total">
+                            <span>ИТОГО:</span>
+                            <strong>@Model.Total.ToString("C")</strong>
+                        </div>
+
+                        <a href="/Checkout/Index" class="btn btn-light w-100 mt-3 fw-600">
+                            ✓ Оформить заказ
+                        </a>
+
+                        <a href="/Product/Catalog" class="btn btn-outline-light w-100 mt-2">
+                            ← Вернуться в каталог
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Информация о доставке -->
+                <div class="card mt-3" style="border: none; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <div class="card-body">
+                        <h6 class="mb-3">🚚 Информация о доставке</h6>
+                        <ul class="small" style="list-style: none; padding: 0;">
+                            <li class="mb-2">✓ Доставка по всей России</li>
+                            <li class="mb-2">✓ Бесплатная доставка от 2000₽</li>
+                            <li class="mb-2">✓ Доставка за 1-3 дня</li>
+                            <li>✓ Гарантия на все товары</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!-- Пустая корзина -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="border: none; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.02) 100%);">
+                    <div class="card-body text-center py-5">
+                        <h2 style="font-size: 48px; margin-bottom: 20px;">😕</h2>
+                        <h3>Ваша корзина пуста</h3>
+                        <p class="text-muted mb-4">Начните покупки прямо сейчас и найдите то, что вам нравится</p>
+                        <a href="/Product/Catalog" class="btn btn-primary" style="border-radius: 8px; padding: 10px 30px;">
+                            🛍️ Перейти в каталог
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
 
 <script>
-	function removeFromCart(productId) {
-		if (confirm('Вы уверены? Товар будет удален из корзины.')) {
-			fetch('/Cart/RemoveFromCart', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ productId: productId })
-			})
-			.then(response => response.json())
-			.then(data => {
-				if (data.success) {
-					location.reload();
-				} else {
-					alert('❌ ' + data.message);
-				}
-			})
-			.catch(error => {
-				console.error('Error:', error);
-				alert('❌ Ошибка при удалении товара');
-			});
-		}
-	}
+    // Удаление товара из корзины
+    function removeFromCart(productId) {
+        fetch('/Cart/RemoveFromCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ productId: productId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Ошибка при удалении товара: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при удалении товара');
+        });
+    }
 
-	function clearCart() {
-		if (confirm('Вы уверены? Вся корзина будет очищена.')) {
-			fetch('/Cart/ClearCart', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				}
-			})
-			.then(response => response.json())
-			.then(data => {
-				if (data.success) {
-					location.reload();
-				} else {
-					alert('❌ Ошибка при очистке корзины');
-				}
-			})
-			.catch(error => {
-				console.error('Error:', error);
-				alert('❌ Ошибка');
-			});
-		}
-	}
+    // Изменение количества
+    function updateQuantity(productId, newQuantity) {
+        if (newQuantity < 1) {
+            removeFromCart(productId);
+            return;
+        }
 
-	function updateCartCount(count) {
-		const cartCountElement = document.querySelector('.cart-count');
-		if (cartCountElement) {
-			cartCountElement.textContent = count;
-		}
-	}
+        fetch('/Cart/UpdateQuantity', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+                productId: productId,
+                quantity: newQuantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Ошибка при изменении количества: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при изменении количества');
+        });
+    }
+
+    // Очистка корзины
+    function clearCart() {
+        fetch('/Cart/ClearCart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Ошибка при очистке корзины: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при очистке корзины');
+        });
+    }
 </script>

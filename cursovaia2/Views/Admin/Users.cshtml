@@ -1,0 +1,40 @@
+@model List<cursovaia2.ModelsDb.UserDb>
+@{ ViewData["Title"] = "Пользователи"; }
+
+<div class="admin-panel">
+    <h3>Новый пользователь</h3>
+    <form method="post" action="/Admin/SaveUser" class="admin-form">
+        @Html.AntiForgeryToken()
+        <div><label>Email</label><input type="email" name="email" required></div>
+        <div><label>Пароль</label><input type="password" name="password" required></div>
+        <div><label>Роль</label><select name="roleId" asp-items="ViewBag.Roles"><option value="">—</option></select></div>
+        <div><label>Статус</label><input type="text" name="status" value="active"></div>
+        <button type="submit" class="btn btn-primary">Создать</button>
+    </form>
+</div>
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Email</th><th>Роль</th><th>Статус</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var u in Model)
+        {
+            <tr>
+                <td>@u.Id</td>
+                <td>@u.Email</td>
+                <td>@(u.Role?.Name ?? "—")</td>
+                <td>@u.Status</td>
+                <td>
+                    @if (u.Id != Context.Session.GetInt32("UserId"))
+                    {
+                        <form method="post" action="/Admin/DeleteUser" onsubmit="return confirm('Удалить?')">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@u.Id">
+                            <button type="submit" class="btn-admin btn-admin--danger">×</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

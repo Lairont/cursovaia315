@@ -1,0 +1,21 @@
+@model cursovaia2.Models.AdminDashboardViewModel
+@{
+    ViewData["Title"] = "Дашборд";
+}
+
+<div class="admin-stats">
+    <div class="admin-stat-card"><strong>@Model.Categories</strong><span>Категории</span><a href="/Admin/Categories">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Brands</strong><span>Бренды</span><a href="/Admin/Brands">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Products</strong><span>Товары</span><a href="/Admin/Products">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Users</strong><span>Пользователи</span><a href="/Admin/Users">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Orders</strong><span>Заказы</span><a href="/Admin/Orders">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Reviews</strong><span>Отзывы</span><a href="/Admin/Reviews">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Wishlists</strong><span>Избранное</span><a href="/Admin/Wishlists">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Carts</strong><span>Корзины</span><a href="/Admin/Carts">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Discounts</strong><span>Скидки</span><a href="/Admin/Discounts">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.PromoCodes</strong><span>Промокоды</span><a href="/Admin/PromoCodes">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Payments</strong><span>Платежи</span><a href="/Admin/Payments">Управление</a></div>
+    <div class="admin-stat-card"><strong>@Model.Deliveries</strong><span>Доставки</span><a href="/Admin/Deliveries">Управление</a></div>
+</div>
+
+<p class="text-muted">Нет данных? <a href="/Test/AddTestData">Заполнить тестовые данные</a></p>

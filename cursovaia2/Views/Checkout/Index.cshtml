@@ -1,222 +1,230 @@
-@using cursovaia2.Models;
-@model Cart
-
+@using cursovaia2.Models
+@model CheckoutViewModel
 @{
-	ViewData["Title"] = "Оформление заказа";
-	var customerId = ViewBag.CustomerId;
-	var customer = ViewBag.Customer;
+    ViewData["Title"] = "Оформление заказа";
+    var customer = ViewBag.Customer as cursovaia2.ModelsDb.CustomerDb;
+    var firstDelivery = Model.DeliveryMethods.FirstOrDefault();
 }
 
-<div class="container mt-4">
-	<div class="row">
-		<div class="col-md-8">
-			<h1>📦 Оформление заказа</h1>
-			<hr>
+<div class="checkout-page">
+    <h1>Оформление заказа</h1>
 
-			<!-- Форма доставки -->
-			<div class="card mb-4">
-				<div class="card-header bg-primary text-white">
-					<h5 class="mb-0">📍 Адрес доставки</h5>
-				</div>
-				<div class="card-body">
-					<form id="checkoutForm">
-						<div class="mb-3">
-							<label for="address" class="form-label">Адрес:</label>
-							<input type="text" class="form-control" id="address" name="address" placeholder="Улица, дом, квартира" required>
-						</div>
+    @if (!Model.DeliveryMethods.Any() || !Model.PaymentMethods.Any())
+    {
+        <div class="alert alert-danger">
+            Справочники доставки или оплаты пусты. Перезапустите приложение или откройте
+            <a href="/Test/AddTestData">/Test/AddTestData</a> для заполнения данных.
+        </div>
+    }
 
-						<div class="row">
-							<div class="col-md-6">
-								<div class="mb-3">
-									<label for="city" class="form-label">Город:</label>
-									<input type="text" class="form-control" id="city" name="city" placeholder="Москва" required>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="mb-3">
-									<label for="postalCode" class="form-label">Почтовый индекс:</label>
-									<input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="119991" required>
-								</div>
-							</div>
-						</div>
+    <div class="checkout-layout">
+        <section class="checkout-form-panel">
+            <form id="checkoutForm" onsubmit="return false;">
+                <h3>Адрес доставки</h3>
+                <div class="form-group">
+                    <label for="city">Город *</label>
+                    <input type="text" id="city" required placeholder="Москва" value="">
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес *</label>
+                    <input type="text" id="address" required placeholder="Улица, дом, квартира" value="">
+                </div>
+                <div class="form-group">
+                    <label for="postalCode">Индекс</label>
+                    <input type="text" id="postalCode" placeholder="123456" value="">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" id="phone" required placeholder="+7 (999) 123-45-67"
+                           value="@(customer?.Phone ?? "")">
+                </div>
 
-						<div class="mb-3">
-							<label for="phone" class="form-label">Телефон:</label>
-							<input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
-						</div>
+                <h3>Способ доставки *</h3>
+                @if (Model.DeliveryMethods.Any())
+                {
+                    <div class="checkout-options">
+                        @foreach (var dm in Model.DeliveryMethods)
+                        {
+                            <label class="checkout-option">
+                                <input type="radio" name="delivery" value="@dm.Id"
+                                       data-price="@dm.Price.ToString(System.Globalization.CultureInfo.InvariantCulture)"
+                                       @(dm == firstDelivery ? "checked" : "")>
+                                <span class="checkout-option__body">
+                                    <strong>@dm.Name</strong>
+                                    <span class="checkout-option__price">
+                                        @(dm.Price > 0 ? dm.Price.ToString("N0") + " ₽" : "Бесплатно")
+                                    </span>
+                                </span>
+                            </label>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-danger">Нет доступных способов доставки.</p>
+                }
 
-						<!-- Способ доставки -->
-						<div class="mb-4">
-							<label class="form-label">Способ доставки:</label>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="delivery" id="delivery1" value="1" checked>
-								<label class="form-check-label" for="delivery1">
-									Стандартная доставка (5-7 дней) - 300 ₽
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="delivery" id="delivery2" value="2">
-								<label class="form-check-label" for="delivery2">
-									Экспресс доставка (1-2 дня) - 800 ₽
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="delivery" id="delivery3" value="3">
-								<label class="form-check-label" for="delivery3">
-									Самовывоз - Бесплатно
-								</label>
-							</div>
-						</div>
+                <h3>Способ оплаты *</h3>
+                @if (Model.PaymentMethods.Any())
+                {
+                    <div class="checkout-options">
+                        @foreach (var pm in Model.PaymentMethods)
+                        {
+                            <label class="checkout-option">
+                                <input type="radio" name="payment" value="@pm.Id"
+                                       @(pm == Model.PaymentMethods.First() ? "checked" : "")>
+                                <span class="checkout-option__body">
+                                    <strong>@pm.Name</strong>
+                                </span>
+                            </label>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-danger">Нет доступных способов оплаты.</p>
+                }
 
-						<!-- Способ оплаты -->
-						<div class="mb-4">
-							<label class="form-label">Способ оплаты:</label>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="payment" id="payment1" value="1" checked>
-								<label class="form-check-label" for="payment1">
-									Карта (при доставке)
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="payment" id="payment2" value="2">
-								<label class="form-check-label" for="payment2">
-									Наличные (при доставке)
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input" type="radio" name="payment" id="payment3" value="3">
-								<label class="form-check-label" for="payment3">
-									Онлайн-платёж
-								</label>
-							</div>
-						</div>
+                <h3>Промокод</h3>
+                <div class="promo-row">
+                    <input type="text" id="promoCode" placeholder="Введите промокод">
+                    <button type="button" class="btn btn-secondary" onclick="applyPromo()">Применить</button>
+                </div>
+                <p id="promoMessage" class="promo-message"></p>
 
-						<button type="button" class="btn btn-primary btn-lg w-100" onclick="submitOrder()">
-							✓ Подтвердить заказ
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
+                <button type="button" id="submitOrderBtn" class="btn btn-primary btn-lg btn-block"
+                        onclick="submitOrder()" @(Model.DeliveryMethods.Any() && Model.PaymentMethods.Any() ? "" : "disabled")>
+                    Подтвердить заказ
+                </button>
+                <p id="checkoutError" class="promo-message promo-message--err" style="display:none;"></p>
+            </form>
+        </section>
 
-		<!-- Итоги заказа -->
-		<div class="col-md-4">
-			<div class="card sticky-top" style="top: 20px;">
-				<div class="card-header bg-success text-white">
-					<h5 class="mb-0">💰 Ваш заказ</h5>
-				</div>
-				<div class="card-body">
-					@if (Model != null && Model.Items.Any())
-					{
-						<div class="mb-3" style="max-height: 300px; overflow-y: auto;">
-							@foreach (var item in Model.Items.GroupBy(x => x.ProductId))
-							{
-								<div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
-									<div>
-										<div class="fw-bold">@item.First().ProductName</div>
-										<small class="text-muted">@item.Count() шт. × @item.First().Price.ToString("C")</small>
-									</div>
-									<div class="text-end fw-bold">@(item.First().Price * item.Count()).ToString("C")</div>
-								</div>
-							}
-						</div>
-
-						<hr>
-
-						<div class="mb-2">
-							<div class="d-flex justify-content-between">
-								<span>Товары:</span>
-								<strong>@Model.Total.ToString("C")</strong>
-							</div>
-						</div>
-
-						<div class="mb-3">
-							<div class="d-flex justify-content-between">
-								<span>Доставка:</span>
-								<strong id="deliveryPrice">300 ₽</strong>
-							</div>
-						</div>
-
-						<hr>
-
-						<div class="mb-3">
-							<h5 class="d-flex justify-content-between">
-								<span>ИТОГО:</span>
-								<strong class="text-success" id="totalPrice">@(Model.Total + 300).ToString("C")</strong>
-							</h5>
-						</div>
-
-						<div class="alert alert-info" role="alert">
-							<small>
-								<strong>📝 Заказов:</strong> @Model.ItemCount<br>
-								<strong>📦 Товаров:</strong> @Model.Items.Count() шт.
-							</small>
-						</div>
-					}
-				</div>
-			</div>
-		</div>
-	</div>
+        <aside class="checkout-summary">
+            <h3>Ваш заказ</h3>
+            @foreach (var item in Model.Cart.Items)
+            {
+                <div class="checkout-item">
+                    <span>@item.ProductName × @item.Quantity</span>
+                    <strong>@((item.Price * item.Quantity).ToString("N0")) ₽</strong>
+                </div>
+            }
+            <hr>
+            <div class="summary-row"><span>Товары:</span><span id="subtotalDisplay">@Model.Subtotal.ToString("N0") ₽</span></div>
+            <div class="summary-row"><span>Доставка:</span><span id="deliveryDisplay">—</span></div>
+            <div class="summary-row"><span>Скидка по промокоду:</span><span id="discountDisplay">0 ₽</span></div>
+            <div class="summary-row summary-row--total"><span>Итого к оплате:</span><span id="totalDisplay">@Model.Subtotal.ToString("N0") ₽</span></div>
+        </aside>
+    </div>
 </div>
 
 <script>
-	const basePrice = @Model.Total;
+    const subtotal = @Model.Subtotal.ToString(System.Globalization.CultureInfo.InvariantCulture);
+    let deliveryPrice = @(firstDelivery?.Price.ToString(System.Globalization.CultureInfo.InvariantCulture) ?? "0");
+    let promoDiscount = 0;
 
-	document.querySelectorAll('input[name="delivery"]').forEach(radio => {
-		radio.addEventListener('change', updateTotal);
-	});
+    document.querySelectorAll('input[name="delivery"]').forEach(r => {
+        r.addEventListener('change', () => {
+            deliveryPrice = parseFloat(r.dataset.price) || 0;
+            updateTotals();
+        });
+    });
+    updateTotals();
 
-	function updateTotal() {
-		const deliverySelected = document.querySelector('input[name="delivery"]:checked').value;
-		let deliveryPrice = 0;
-		let deliveryText = '';
+    function updateTotals() {
+        const delEl = document.getElementById('deliveryDisplay');
+        if (delEl) delEl.textContent = deliveryPrice > 0 ? deliveryPrice.toLocaleString('ru-RU') + ' ₽' : 'Бесплатно';
+        document.getElementById('discountDisplay').textContent = promoDiscount > 0 ? '−' + promoDiscount.toLocaleString('ru-RU') + ' ₽' : '0 ₽';
+        const total = Math.max(0, subtotal + deliveryPrice - promoDiscount);
+        document.getElementById('totalDisplay').textContent = total.toLocaleString('ru-RU') + ' ₽';
+    }
 
-		if (deliverySelected == '1') {
-			deliveryPrice = 300;
-			deliveryText = '300 ₽';
-		} else if (deliverySelected == '2') {
-			deliveryPrice = 800;
-			deliveryText = '800 ₽';
-		} else {
-			deliveryPrice = 0;
-			deliveryText = 'Бесплатно';
-		}
+    function showCheckoutError(msg) {
+        const el = document.getElementById('checkoutError');
+        el.textContent = msg;
+        el.style.display = 'block';
+    }
 
-		document.getElementById('deliveryPrice').textContent = deliveryText;
-		const total = basePrice + deliveryPrice;
-		document.getElementById('totalPrice').textContent = total.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
-	}
+    function applyPromo() {
+        const code = document.getElementById('promoCode').value.trim();
+        if (!code) return;
+        fetch('/Checkout/ApplyPromo', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ promoCode: code, subtotal: subtotal + deliveryPrice })
+        })
+        .then(r => r.json())
+        .then(data => {
+            const msg = document.getElementById('promoMessage');
+            if (data.success) {
+                promoDiscount = data.discountAmount;
+                msg.textContent = data.message;
+                msg.className = 'promo-message promo-message--ok';
+            } else {
+                promoDiscount = 0;
+                msg.textContent = data.message || 'Промокод не действует';
+                msg.className = 'promo-message promo-message--err';
+            }
+            updateTotals();
+        })
+        .catch(() => showCheckoutError('Не удалось проверить промокод'));
+    }
 
-	function submitOrder() {
-		const form = document.getElementById('checkoutForm');
-		const formData = new FormData(form);
+    function submitOrder() {
+        document.getElementById('checkoutError').style.display = 'none';
 
-		// Преобразуем данные формы в JSON
-		const data = {
-			address: document.getElementById('address').value,
-			city: document.getElementById('city').value,
-			postalCode: document.getElementById('postalCode').value,
-			phone: document.getElementById('phone').value
-		};
+        const deliveryRadio = document.querySelector('input[name="delivery"]:checked');
+        const paymentRadio = document.querySelector('input[name="payment"]:checked');
 
-		fetch('/Checkout/PlaceOrder', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(data)
-		})
-		.then(response => response.json())
-		.then(data => {
-			if (data.success) {
-				window.location.href = `/Checkout/OrderConfirmed?orderId=${data.orderId}`;
-			} else {
-				alert('❌ Ошибка: ' + data.message);
-			}
-		})
-		.catch(error => {
-			console.error('Error:', error);
-			alert('❌ Ошибка при оформлении заказа');
-		});
-	}
+        if (!deliveryRadio) { showCheckoutError('Выберите способ доставки'); return; }
+        if (!paymentRadio) { showCheckoutError('Выберите способ оплаты'); return; }
+
+        const address = document.getElementById('address').value.trim();
+        const city = document.getElementById('city').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+
+        if (!city || !address || !phone) {
+            showCheckoutError('Заполните город, адрес и телефон');
+            return;
+        }
+
+        const btn = document.getElementById('submitOrderBtn');
+        btn.disabled = true;
+        btn.textContent = 'Оформляем...';
+
+        const data = {
+            address: address,
+            city: city,
+            postalCode: document.getElementById('postalCode').value.trim(),
+            phone: phone,
+            promoCode: document.getElementById('promoCode').value.trim(),
+            deliveryMethodId: parseInt(deliveryRadio.value, 10),
+            paymentMethodId: parseInt(paymentRadio.value, 10)
+        };
+
+        fetch('/Checkout/PlaceOrder', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(async r => {
+            const text = await r.text();
+            try { return JSON.parse(text); }
+            catch { throw new Error(text || 'Ошибка сервера'); }
+        })
+        .then(data => {
+            if (data.success) {
+                window.location.href = `/Checkout/OrderConfirmed?orderId=${data.orderId}`;
+            } else {
+                showCheckoutError(data.message || 'Ошибка оформления');
+                btn.disabled = false;
+                btn.textContent = 'Подтвердить заказ';
+            }
+        })
+        .catch(err => {
+            showCheckoutError(err.message || 'Сетевая ошибка при оформлении');
+            btn.disabled = false;
+            btn.textContent = 'Подтвердить заказ';
+        });
+    }
 </script>

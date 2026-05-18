@@ -1,0 +1,20 @@
+@model List<cursovaia2.ModelsDb.DiscountDb>
+@{ ViewData["Title"] = "Скидки"; }
+<div class="admin-panel">
+    <form method="post" action="/Admin/SaveDiscount" class="admin-form">
+        @Html.AntiForgeryToken()
+        <div><label>Название</label><input type="text" name="name" required></div>
+        <div><label>Тип</label><select name="type"><option value="percent">%</option><option value="fixed">Фикс</option></select></div>
+        <div><label>Значение</label><input type="number" step="0.01" name="value" required></div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+</div>
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Название</th><th>Тип</th><th>Значение</th><th></th></tr></thead>
+        <tbody>@foreach (var d in Model) {
+            <tr><td>@d.Id</td><td>@d.Name</td><td>@d.Type</td><td>@d.Value</td>
+            <td><form method="post" action="/Admin/DeleteDiscount" onsubmit="return confirm('?')">@Html.AntiForgeryToken()<input type="hidden" name="id" value="@d.Id"><button class="btn-admin btn-admin--danger">×</button></form></td></tr>
+        }</tbody>
+    </table>
+</div>

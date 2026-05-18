@@ -1,0 +1,21 @@
+@model List<cursovaia2.ModelsDb.DeliveryDb>
+@{ ViewData["Title"] = "Доставки"; }
+<div class="admin-panel">
+    <form method="post" action="/Admin/SaveDelivery" class="admin-form">
+        @Html.AntiForgeryToken()
+        <div><label>Заказ</label><select name="orderId" asp-items="ViewBag.Orders" required></select></div>
+        <div><label>Адрес</label><input type="text" name="address" required></div>
+        <div><label>Способ</label><select name="deliveryMethodId" asp-items="ViewBag.Methods"><option value="">—</option></select></div>
+        <div><label>Статус</label><select name="status"><option value="pending">pending</option><option value="in_progress">in_progress</option><option value="delivered">delivered</option></select></div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+</div>
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Заказ</th><th>Адрес</th><th>Статус</th><th></th></tr></thead>
+        <tbody>@foreach (var d in Model) {
+            <tr><td>@d.Id</td><td>@d.OrderId</td><td>@d.Address</td><td>@d.Status</td>
+            <td><form method="post" action="/Admin/DeleteDelivery">@Html.AntiForgeryToken()<input type="hidden" name="id" value="@d.Id"><button class="btn-admin btn-admin--danger">×</button></form></td></tr>
+        }</tbody>
+    </table>
+</div>

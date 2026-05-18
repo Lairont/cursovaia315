@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cursovaia2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9000cb5b69a48e3e461dbd81b47419fd5caf9aa2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5630df957cfc869ea88e4a0df66997e57db4278")]
 [assembly: System.Reflection.AssemblyProductAttribute("cursovaia2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cursovaia2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

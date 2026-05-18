@@ -1,0 +1,11 @@
+@model List<cursovaia2.ModelsDb.ReviewDb>
+@{ ViewData["Title"] = "Отзывы"; }
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Товар</th><th>User ID</th><th>Оценка</th><th>Комментарий</th><th>Дата</th><th></th></tr></thead>
+        <tbody>@foreach (var r in Model) {
+            <tr><td>@r.Id</td><td>@(r.Product?.Name)</td><td>@r.CustomerId</td><td>@r.Rating ★</td><td>@r.Comment</td><td>@r.CreatedAt.ToLocalTime().ToString("g")</td>
+            <td><form method="post" action="/Admin/DeleteReview" onsubmit="return confirm('?')">@Html.AntiForgeryToken()<input type="hidden" name="id" value="@r.Id"><button class="btn-admin btn-admin--danger">×</button></form></td></tr>
+        }</tbody>
+    </table>
+</div>

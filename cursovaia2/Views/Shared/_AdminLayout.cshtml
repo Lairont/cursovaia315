@@ -1,0 +1,65 @@
+@{
+    Layout = null;
+    var title = ViewData["Title"]?.ToString() ?? "Админ-панель";
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@title - Admin</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/admin.css" asp-append-version="true" />
+</head>
+<body class="admin-body">
+    <aside class="admin-sidebar">
+        <a href="/Admin" class="admin-sidebar__brand">⚙️ Админ-панель</a>
+        <nav class="admin-nav">
+            <a href="/Admin" class="admin-nav__link @(currentAction == "Index" ? "admin-nav__link--active" : "")">📊 Дашборд</a>
+            <span class="admin-nav__group">Каталог</span>
+            <a href="/Admin/Categories" class="admin-nav__link @(currentAction == "Categories" ? "admin-nav__link--active" : "")">📂 Категории</a>
+            <a href="/Admin/Brands" class="admin-nav__link @(currentAction == "Brands" ? "admin-nav__link--active" : "")">🏢 Бренды</a>
+            <a href="/Admin/Products" class="admin-nav__link @(currentAction.Contains("Product") ? "admin-nav__link--active" : "")">📦 Товары</a>
+            <span class="admin-nav__group">Пользователи</span>
+            <a href="/Admin/Users" class="admin-nav__link @(currentAction == "Users" ? "admin-nav__link--active" : "")">👤 Пользователи</a>
+            <a href="/Admin/Roles" class="admin-nav__link @(currentAction == "Roles" ? "admin-nav__link--active" : "")">🔑 Роли</a>
+            <a href="/Admin/Customers" class="admin-nav__link @(currentAction == "Customers" ? "admin-nav__link--active" : "")">🛍️ Покупатели</a>
+            <span class="admin-nav__group">Заказы</span>
+            <a href="/Admin/Orders" class="admin-nav__link @(currentAction.Contains("Order") ? "admin-nav__link--active" : "")">📋 Заказы</a>
+            <a href="/Admin/Carts" class="admin-nav__link @(currentAction == "Carts" ? "admin-nav__link--active" : "")">🛒 Корзины</a>
+            <span class="admin-nav__group">Маркетинг</span>
+            <a href="/Admin/Discounts" class="admin-nav__link @(currentAction == "Discounts" ? "admin-nav__link--active" : "")">💰 Скидки</a>
+            <a href="/Admin/PromoCodes" class="admin-nav__link @(currentAction == "PromoCodes" ? "admin-nav__link--active" : "")">🎟️ Промокоды</a>
+            <a href="/Admin/ProductDiscounts" class="admin-nav__link @(currentAction == "ProductDiscounts" ? "admin-nav__link--active" : "")">🏷️ Скидки товаров</a>
+            <span class="admin-nav__group">Оплата и доставка</span>
+            <a href="/Admin/PaymentMethods" class="admin-nav__link @(currentAction == "PaymentMethods" ? "admin-nav__link--active" : "")">💳 Способы оплаты</a>
+            <a href="/Admin/Payments" class="admin-nav__link @(currentAction == "Payments" ? "admin-nav__link--active" : "")">💵 Платежи</a>
+            <a href="/Admin/DeliveryMethods" class="admin-nav__link @(currentAction == "DeliveryMethods" ? "admin-nav__link--active" : "")">🚚 Доставка</a>
+            <a href="/Admin/Deliveries" class="admin-nav__link @(currentAction == "Deliveries" ? "admin-nav__link--active" : "")">📦 Отгрузки</a>
+            <span class="admin-nav__group">Контент</span>
+            <a href="/Admin/Reviews" class="admin-nav__link @(currentAction == "Reviews" ? "admin-nav__link--active" : "")">⭐ Отзывы</a>
+            <a href="/Admin/Wishlists" class="admin-nav__link @(currentAction == "Wishlists" ? "admin-nav__link--active" : "")">❤️ Избранное</a>
+        </nav>
+        <div class="admin-sidebar__footer">
+            <a href="/">← На сайт</a>
+            <a href="/Account/Logout">Выход</a>
+        </div>
+    </aside>
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1>@title</h1>
+            <span class="admin-header__user">@Context.Session.GetString("Email")</span>
+        </header>
+        @if (TempData["Success"] != null)
+        {
+            <p class="alert alert-success">@TempData["Success"]</p>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+        @RenderBody()
+    </main>
+</body>
+</html>

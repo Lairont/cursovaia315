@@ -1,0 +1,79 @@
+@model cursovaia2.ModelsDb.ProductDb
+@{
+    ViewData["Title"] = Model.Id > 0 ? "Редактировать товар" : "Новый товар";
+}
+
+<div class="admin-panel">
+    <form method="post" action="/Admin/SaveProduct">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Id" value="@Model.Id">
+        <div class="admin-form" style="grid-template-columns: repeat(2, 1fr);">
+            <div><label>Название *</label><input type="text" name="Name" value="@Model.Name" required></div>
+            <div><label>SKU *</label><input type="text" name="Sku" value="@Model.Sku" required></div>
+            <div><label>Категория</label><select name="CategoryId" asp-items="ViewBag.Categories"><option value="">—</option></select></div>
+            <div><label>Бренд</label><select name="BrandId" asp-items="ViewBag.Brands"><option value="">—</option></select></div>
+            <div><label>Цена</label><input type="number" step="0.01" name="Price" value="@Model.Price"></div>
+            <div><label>Себестоимость</label><input type="number" step="0.01" name="CostPrice" value="@Model.CostPrice"></div>
+            <div style="grid-column:1/-1"><label>Описание</label><textarea name="Description" rows="3">@Model.Description</textarea></div>
+            <div><label><input type="checkbox" name="IsActive" value="true" @(Model.IsActive ? "checked" : "")> Активен</label></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить товар</button>
+    </form>
+</div>
+
+@if (Model.Id > 0)
+{
+    <div class="admin-panel">
+        <h3>Фото</h3>
+        <form method="post" action="/Admin/AddProductImage" class="admin-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="productId" value="@Model.Id">
+            <div><label>URL изображения</label><input type="url" name="url" placeholder="https://..." required></div>
+            <button type="submit" class="btn-admin btn-admin--primary">Добавить</button>
+        </form>
+        <ul>
+            @foreach (var img in Model.Images ?? Enumerable.Empty<cursovaia2.ModelsDb.ProductImageDb>())
+            {
+                <li>
+                    <a href="@img.Url" target="_blank">@img.Url</a>
+                    <form method="post" action="/Admin/DeleteProductImage" style="display:inline">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@img.Id">
+                        <input type="hidden" name="productId" value="@Model.Id">
+                        <button type="submit" class="btn-admin btn-admin--danger">×</button>
+                    </form>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <div class="admin-panel">
+        <h3>Характеристики</h3>
+        <form method="post" action="/Admin/AddProductAttribute" class="admin-form">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="productId" value="@Model.Id">
+            <div><label>Ключ</label><input type="text" name="key" required></div>
+            <div><label>Значение</label><input type="text" name="value" required></div>
+            <button type="submit" class="btn-admin btn-admin--primary">Добавить</button>
+        </form>
+        <table class="admin-table">
+            @foreach (var a in Model.Attributes ?? Enumerable.Empty<cursovaia2.ModelsDb.ProductAttributeDb>())
+            {
+                <tr>
+                    <td>@a.Key</td>
+                    <td>@a.Value</td>
+                    <td>
+                        <form method="post" action="/Admin/DeleteProductAttribute">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@a.Id">
+                            <input type="hidden" name="productId" value="@Model.Id">
+                            <button type="submit" class="btn-admin btn-admin--danger">×</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+
+<p><a href="/Admin/Products">← К списку товаров</a></p>

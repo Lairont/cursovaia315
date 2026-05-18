@@ -1,56 +1,57 @@
+using cursovaia2.Data;
 using cursovaia2.Models;
+using cursovaia2.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace cursovaia2.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext _context;
+        private readonly PricingService _pricing;
+
+        public HomeController(ApplicationDbContext context, PricingService pricing)
+        {
+            _context = context;
+            _pricing = pricing;
+        }
+
         public IActionResult Index()
         {
-            var categories = GetCategories();
-            var popularProducts = GetPopularProducts();
-            var viewModel = new { Categories = categories, PopularProducts = popularProducts };
-            return View(viewModel);
+            var popularProducts = _context.ProductsDb
+                .Where(p => p.IsActive)
+                .Include(p => p.Images)
+                .Include(p => p.Category)
+                .OrderByDescending(p => p.Id)
+                .Take(8)
+                .ToList();
+
+            var userId = HttpContext.Session.GetInt32("UserId");
+            var wishlistIds = userId.HasValue
+                ? _context.Wishlists.Where(w => w.CustomerId == userId.Value).Select(w => w.ProductId).ToHashSet()
+                : new HashSet<int>();
+
+            var model = new HomeViewModel
+            {
+                Categories = _context.CategoriesDb.OrderBy(c => c.Name).Take(6).ToList(),
+                PopularProducts = popularProducts,
+                ProductPrices = _pricing.GetProductPrices(popularProducts),
+                WishlistProductIds = wishlistIds
+            };
+
+            return View(model);
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
+        public IActionResult About() => View();
 
-        public IActionResult Contacts()
-        {
-            return View();
-        }
+        public IActionResult Contacts() => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        private List<Category> GetCategories()
-        {
-            return new List<Category>
-            {
-                new() { Id = 1, Name = "Ручки", Icon = "✏️" },
-                new() { Id = 2, Name = "Карандаши", Icon = "📝" },
-                new() { Id = 3, Name = "Тетради", Icon = "📓" },
-                new() { Id = 4, Name = "Блокноты", Icon = "📄" },
-                new() { Id = 5, Name = "Клей и скотч", Icon = "📌" },
-                new() { Id = 6, Name = "Папки и файлы", Icon = "📂" }
-            };
-        }
-
-        private List<Product> GetPopularProducts()
-        {
-            return new List<Product>
-            {
-                new() { Id = 1, Name = "Ручка гелевая", Description = "Удобная ручка", Price = 50m },
-                new() { Id = 2, Name = "Карандаш HB", Description = "Для рисования", Price = 30m },
-                new() { Id = 3, Name = "Тетрадь 96л", Description = "Качественная бумага", Price = 150m }
-            };
         }
     }
 }

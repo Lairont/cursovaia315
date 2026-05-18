@@ -1,0 +1,31 @@
+@model List<cursovaia2.ModelsDb.ProductDb>
+@{ ViewData["Title"] = "Товары"; }
+
+<p><a href="/Admin/ProductEdit" class="btn btn-primary">+ Новый товар</a></p>
+
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Название</th><th>SKU</th><th>Цена</th><th>Категория</th><th>Активен</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+                <td>@p.Sku</td>
+                <td>@p.Price.ToString("N0") ₽</td>
+                <td>@(p.Category?.Name ?? "—")</td>
+                <td>@(p.IsActive ? "✓" : "—")</td>
+                <td class="admin-actions">
+                    <a href="/Admin/ProductEdit/@p.Id" class="btn-admin btn-admin--primary">Изменить</a>
+                    <form method="post" action="/Admin/DeleteProduct" style="display:inline" onsubmit="return confirm('Удалить?')">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@p.Id">
+                        <button type="submit" class="btn-admin btn-admin--danger">×</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

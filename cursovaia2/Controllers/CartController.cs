@@ -10,13 +10,14 @@ namespace cursovaia2.Controllers
     public class CartController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly PricingService _pricing;
 
-        public CartController(ApplicationDbContext context)
+        public CartController(ApplicationDbContext context, PricingService pricing)
         {
             _context = context;
+            _pricing = pricing;
         }
 
-        // GET: Cart/Index - просмотр корзины
         public IActionResult Index()
         {
             try
@@ -25,26 +26,10 @@ namespace cursovaia2.Controllers
 
                 if (!userId.HasValue)
                 {
-                    // Если не авторизован - используем сессию
-                    var sessionCart = GetSessionCart();
-                    return View(sessionCart);
+                    return View(GetSessionCart());
                 }
 
-                // Если авторизован - загружаем из БД
-                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
-                if (customer == null)
-                {
-                    // Создаём покупателя если его нет
-                    customer = new CustomerDb
-                    {
-                        UserId = userId.Value,
-                        Name = HttpContext.Session.GetString("Email") ?? "Пользователь",
-                        BonusBalance = 0
-                    };
-                    _context.Customers.Add(customer);
-                    _context.SaveChanges();
-                }
-
+                var customer = GetOrCreateCustomer(userId.Value);
                 var dbCart = _context.Carts
                     .Include(c => c.Items)
                     .ThenInclude(ci => ci.Product)
@@ -57,23 +42,19 @@ namespace cursovaia2.Controllers
                     _context.SaveChanges();
                 }
 
-                // Преобразуем в модель Cart для представления
                 var cart = new Cart();
                 foreach (var item in dbCart.Items)
                 {
-                    var product = new Product
+                    if (item.Product == null) continue;
+                    var price = _pricing.GetProductPrice(item.Product.Id, item.Product.Price).FinalPrice;
+                    cart.AddItem(new Product
                     {
                         Id = item.Product.Id,
                         Name = item.Product.Name,
-                        Price = item.Product.Price
-                    };
-                    for (int i = 0; i < item.Quantity; i++)
-                    {
-                        cart.AddItem(product);
-                    }
+                        Price = price
+                    }, item.Quantity);
                 }
 
-                ViewBag.CartId = dbCart.Id;
                 return View(cart);
             }
             catch (Exception ex)
@@ -83,52 +64,39 @@ namespace cursovaia2.Controllers
             }
         }
 
-        // POST: Cart/AddToCart - добавить товар в корзину
         [HttpPost]
-        public IActionResult AddToCart(int productId, int quantity = 1)
+        public IActionResult AddToCart([FromBody] CartRequest? request)
         {
+            if (request == null || request.ProductId <= 0)
+                return Json(new { success = false, message = "Некорректный запрос" });
+
             try
             {
-                var product = _context.ProductsDb.FirstOrDefault(p => p.Id == productId && p.IsActive);
+                var quantity = request.Quantity > 0 ? request.Quantity : 1;
+                var product = _context.ProductsDb.FirstOrDefault(p => p.Id == request.ProductId && p.IsActive);
 
                 if (product == null)
                     return Json(new { success = false, message = "Товар не найден" });
 
                 var userId = HttpContext.Session.GetInt32("UserId");
 
+                var effectivePrice = _pricing.GetProductPrice(product.Id, product.Price).FinalPrice;
+
                 if (!userId.HasValue)
                 {
-                    // Если не авторизован - используем сессию
                     var sessionCart = GetSessionCart();
-                    var sessionProduct = new Product
+                    sessionCart.AddItem(new Product
                     {
                         Id = product.Id,
                         Name = product.Name,
-                        Price = product.Price
-                    };
-                    for (int i = 0; i < quantity; i++)
-                    {
-                        sessionCart.AddItem(sessionProduct);
-                    }
+                        Price = effectivePrice
+                    }, quantity);
                     SaveSessionCart(sessionCart);
 
                     return Json(new { success = true, message = "Товар добавлен в корзину", cartCount = sessionCart.ItemCount });
                 }
 
-                // Если авторизован - сохраняем в БД
-                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
-                if (customer == null)
-                {
-                    customer = new CustomerDb
-                    {
-                        UserId = userId.Value,
-                        Name = HttpContext.Session.GetString("Email") ?? "Пользователь",
-                        BonusBalance = 0
-                    };
-                    _context.Customers.Add(customer);
-                    _context.SaveChanges();
-                }
-
+                var customer = GetOrCreateCustomer(userId.Value);
                 var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
                 if (dbCart == null)
                 {
@@ -137,32 +105,28 @@ namespace cursovaia2.Controllers
                     _context.SaveChanges();
                 }
 
-                // Проверяем если уже такой товар в корзине
-                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == productId);
+                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == request.ProductId);
                 if (cartItem != null)
                 {
                     cartItem.Quantity += quantity;
+                    cartItem.Price = effectivePrice;
                 }
                 else
                 {
-                    cartItem = new CartItemDb
+                    _context.CartItems.Add(new CartItemDb
                     {
                         CartId = dbCart.Id,
-                        ProductId = productId,
+                        ProductId = request.ProductId,
                         Quantity = quantity,
-                        Price = product.Price
-                    };
-                    _context.CartItems.Add(cartItem);
+                        Price = effectivePrice
+                    });
                 }
 
-                _context.SaveChanges();
                 dbCart.UpdatedAt = DateTime.UtcNow;
                 _context.SaveChanges();
 
-                // Считаем товары в корзине
                 var cartCount = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
-
-                return Json(new { success = true, message = "Товар добавлен в корзину", cartCount = cartCount });
+                return Json(new { success = true, message = "Товар добавлен в корзину", cartCount });
             }
             catch (Exception ex)
             {
@@ -170,10 +134,12 @@ namespace cursovaia2.Controllers
             }
         }
 
-        // POST: Cart/RemoveFromCart - удалить товар из корзины
         [HttpPost]
-        public IActionResult RemoveFromCart(int productId)
+        public IActionResult RemoveFromCart([FromBody] CartRequest? request)
         {
+            if (request == null || request.ProductId <= 0)
+                return Json(new { success = false, message = "Некорректный запрос" });
+
             try
             {
                 var userId = HttpContext.Session.GetInt32("UserId");
@@ -181,7 +147,7 @@ namespace cursovaia2.Controllers
                 if (!userId.HasValue)
                 {
                     var cart = GetSessionCart();
-                    cart.RemoveItem(productId);
+                    cart.RemoveItem(request.ProductId);
                     SaveSessionCart(cart);
                     return Json(new { success = true, cartCount = cart.ItemCount });
                 }
@@ -194,15 +160,15 @@ namespace cursovaia2.Controllers
                 if (dbCart == null)
                     return Json(new { success = false, message = "Корзина не найдена" });
 
-                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == productId);
+                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == request.ProductId);
                 if (cartItem != null)
                 {
                     _context.CartItems.Remove(cartItem);
                     _context.SaveChanges();
                 }
 
-                var cartCount = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
-                return Json(new { success = true, cartCount = cartCount });
+                var cartCount = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => (int?)ci.Quantity) ?? 0;
+                return Json(new { success = true, cartCount });
             }
             catch (Exception ex)
             {
@@ -210,7 +176,60 @@ namespace cursovaia2.Controllers
             }
         }
 
-        // POST: Cart/ClearCart - очистить корзину
+        [HttpPost]
+        public IActionResult UpdateQuantity([FromBody] CartRequest? request)
+        {
+            if (request == null || request.ProductId <= 0)
+                return Json(new { success = false, message = "Некорректный запрос" });
+
+            try
+            {
+                var userId = HttpContext.Session.GetInt32("UserId");
+
+                if (!userId.HasValue)
+                {
+                    var cart = GetSessionCart();
+                    if (request.Quantity <= 0)
+                        cart.RemoveItem(request.ProductId);
+                    else
+                        cart.UpdateQuantityByProductId(request.ProductId, request.Quantity);
+                    SaveSessionCart(cart);
+                    return Json(new { success = true, cartCount = cart.ItemCount });
+                }
+
+                var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
+                if (customer == null)
+                    return Json(new { success = false, message = "Покупатель не найден" });
+
+                var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
+                if (dbCart == null)
+                    return Json(new { success = false, message = "Корзина не найдена" });
+
+                var cartItem = _context.CartItems.FirstOrDefault(ci => ci.CartId == dbCart.Id && ci.ProductId == request.ProductId);
+                if (cartItem == null)
+                    return Json(new { success = false, message = "Товар не найден в корзине" });
+
+                if (request.Quantity <= 0)
+                {
+                    _context.CartItems.Remove(cartItem);
+                }
+                else
+                {
+                    cartItem.Quantity = request.Quantity;
+                }
+
+                dbCart.UpdatedAt = DateTime.UtcNow;
+                _context.SaveChanges();
+
+                var cartCount = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => (int?)ci.Quantity) ?? 0;
+                return Json(new { success = true, cartCount });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = $"Ошибка: {ex.Message}" });
+            }
+        }
+
         [HttpPost]
         public IActionResult ClearCart()
         {
@@ -244,35 +263,56 @@ namespace cursovaia2.Controllers
             }
         }
 
-        // GET: Cart/GetCartCount - получить количество товаров в корзине (для AJAX)
         [HttpGet]
         public IActionResult GetCartCount()
+        {
+            return Json(new { count = GetCartItemCount() });
+        }
+
+        [HttpGet]
+        public IActionResult GetCartData()
+        {
+            return Json(new { itemCount = GetCartItemCount() });
+        }
+
+        private int GetCartItemCount()
         {
             var userId = HttpContext.Session.GetInt32("UserId");
 
             if (!userId.HasValue)
-            {
-                var cart = GetSessionCart();
-                return Json(new { count = cart.ItemCount });
-            }
+                return GetSessionCart().ItemCount;
 
             var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId.Value);
             if (customer == null)
-                return Json(new { count = 0 });
+                return 0;
 
             var dbCart = _context.Carts.FirstOrDefault(c => c.CustomerId == customer.Id);
             if (dbCart == null)
-                return Json(new { count = 0 });
+                return 0;
 
-            var count = _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
-            return Json(new { count = count });
+            return _context.CartItems.Where(ci => ci.CartId == dbCart.Id).Sum(ci => ci.Quantity);
         }
 
-        // Методы для работы с сессией
+        private CustomerDb GetOrCreateCustomer(int userId)
+        {
+            var customer = _context.Customers.FirstOrDefault(c => c.UserId == userId);
+            if (customer != null)
+                return customer;
+
+            customer = new CustomerDb
+            {
+                UserId = userId,
+                Name = HttpContext.Session.GetString("Email") ?? "Пользователь",
+                BonusBalance = 0
+            };
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return customer;
+        }
+
         private Cart GetSessionCart()
         {
-            var cart = HttpContext.Session.Get<Cart>("cart");
-            return cart ?? new Cart();
+            return HttpContext.Session.Get<Cart>("cart") ?? new Cart();
         }
 
         private void SaveSessionCart(Cart cart)

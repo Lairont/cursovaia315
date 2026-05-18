@@ -1,0 +1,16 @@
+@using cursovaia2.ModelsDb
+@model ProductDb
+
+@{
+    var cssClass = ViewData["CssClass"] as string ?? "product-card__img";
+    var imageUrl = Model.Images?.FirstOrDefault(i => !string.IsNullOrWhiteSpace(i.Url))?.Url;
+}
+
+@if (!string.IsNullOrEmpty(imageUrl))
+{
+    <img src="@imageUrl" alt="@Model.Name" class="@cssClass" loading="lazy">
+}
+else
+{
+    <span class="@cssClass product-card__placeholder-inner">📦</span>
+}

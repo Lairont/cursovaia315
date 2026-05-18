@@ -1,0 +1,20 @@
+@model List<cursovaia2.ModelsDb.OrderDb>
+@{ ViewData["Title"] = "Заказы"; }
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>#</th><th>Покупатель</th><th>Сумма</th><th>Статус</th><th>Дата</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.Id</td>
+                <td>@(o.Customer?.Name ?? "—")</td>
+                <td>@o.FinalPrice.ToString("N0") ₽</td>
+                <td>@o.Status</td>
+                <td>@o.CreatedAt.ToLocalTime().ToString("g")</td>
+                <td><a href="/Admin/OrderEdit/@o.Id" class="btn-admin btn-admin--primary">Открыть</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

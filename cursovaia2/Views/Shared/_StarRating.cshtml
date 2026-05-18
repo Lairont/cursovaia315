@@ -1,0 +1,33 @@
+@{
+    var productId = (int)ViewData["ProductId"]!;
+    var average = ViewData["Average"] as double? ?? 0;
+    var count = ViewData["Count"] as int? ?? 0;
+    var userRating = ViewData["UserRating"] as int?;
+    var interactive = ViewData["Interactive"] as bool? ?? false;
+    var size = ViewData["Size"] as string ?? "md";
+}
+
+<div class="star-rating star-rating--@size @(interactive ? "star-rating--interactive" : "")"
+     data-product-id="@productId"
+     data-interactive="@(interactive ? "true" : "false")">
+    @for (var i = 1; i <= 5; i++)
+    {
+        var filled = count > 0 && i <= Math.Round(average, MidpointRounding.AwayFromZero);
+        var userFilled = userRating.HasValue && i <= userRating.Value;
+        <button type="button"
+                class="star @(filled ? "star--filled" : "") @(userFilled ? "star--user" : "")"
+                data-value="@i"
+                @(interactive ? "" : "disabled")>★</button>
+    }
+    <span class="star-rating__meta">
+        @if (count > 0)
+        {
+            <span class="star-rating__avg">@average.ToString("0.0")</span>
+            <span class="star-rating__count">(@count)</span>
+        }
+        else
+        {
+            <span class="star-rating__empty">Нет оценок</span>
+        }
+    </span>
+</div>

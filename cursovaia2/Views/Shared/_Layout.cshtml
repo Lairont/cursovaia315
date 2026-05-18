@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Stationery Store</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <style>
         * {
             margin: 0;
@@ -48,10 +49,13 @@
             gap: 0.5rem;
         }
 
-        nav {
+        nav.site-nav {
             display: flex;
-            gap: 2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.75rem;
             align-items: center;
+            justify-content: flex-end;
+            max-width: 100%;
         }
 
         nav a {
@@ -572,17 +576,21 @@
             <a href="/" class="logo">
                 📝 Stationery Store
             </a>
-            <nav>
+            <nav class="site-nav">
                 <a href="/">Главная</a>
                 <a href="/Product/Catalog">Каталог</a>
                 <a href="/Home/About">О магазине</a>
                 <a href="/Home/Contacts">Контакты</a>
-                <a href="/Cart/Index" class="cart-link">
-                    🛒 Корзина
-                    <span class="cart-count">0</span>
+                <a href="/Cart/Index" class="cart-link" title="Корзина">
+                    🛒 <span class="cart-count" data-cart-count>0</span>
                 </a>
+                @if (string.Equals(Context.Session.GetString("RoleName"), "admin", StringComparison.OrdinalIgnoreCase))
+                {
+                    <a href="/Admin" class="btn btn-login nav-icon-btn" style="background:#7c3aed;" title="Админ-панель">⚙️</a>
+                }
                 @if (Context.Session.GetInt32("UserId") != null)
                 {
+                    <a href="/Wishlist" class="btn btn-secondary nav-icon-btn" title="Избранное">♡</a>
                     <div class="user-menu">
                         <div class="dropdown">
                             <button class="btn btn-user-menu dropdown-toggle" type="button" id="userMenuBtn" data-bs-toggle="dropdown" aria-expanded="false">
@@ -607,9 +615,16 @@
     </header>
 
     <main>
-        <div class="container">
+        @if (ViewData["FullWidth"] as bool? == true)
+        {
             @RenderBody()
-        </div>
+        }
+        else
+        {
+            <div class="container">
+                @RenderBody()
+            </div>
+        }
     </main>
 
     <footer>
@@ -623,12 +638,11 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Категории</h3>
+                <h3>Каталог</h3>
                 <ul>
-                    <li><a href="/Product/Catalog?category=Ручки">Ручки</a></li>
-                    <li><a href="/Product/Catalog?category=Карандаши">Карандаши</a></li>
-                    <li><a href="/Product/Catalog?category=Тетради">Тетради</a></li>
-                    <li><a href="/Product/Catalog?category=Блокноты">Блокноты</a></li>
+                    <li><a href="/Product/Catalog">Все товары</a></li>
+                    <li><a href="/Product/Catalog?sortBy=price_asc">По цене ↑</a></li>
+                    <li><a href="/Product/Catalog?sortBy=price_desc">По цене ↓</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -651,14 +665,40 @@
         });
 
         function updateCartBadge() {
-            fetch('/Cart/GetCartData')
+            fetch('/Cart/GetCartCount')
                 .then(response => response.json())
                 .then(data => {
-                    const badge = document.querySelector('.cart-count');
+                    const badge = document.querySelector('[data-cart-count]');
                     if (badge) {
-                        badge.textContent = data.itemCount;
+                        badge.textContent = data.count ?? 0;
                     }
-                });
+                })
+                .catch(() => {});
+        }
+
+        function toggleWishlist(productId, btn) {
+            fetch('/Wishlist/Toggle', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ productId })
+            })
+            .then(r => r.json())
+            .then(d => {
+                if (d.success) {
+                    const active = !!d.inWishlist;
+                    if (btn.classList.contains('btn-wishlist--lg')) {
+                        btn.textContent = active ? '♥ В избранном' : '♡ В избранное';
+                    } else {
+                        btn.textContent = active ? '♥' : '♡';
+                    }
+                    btn.classList.toggle('btn-wishlist--active', active);
+                    btn.title = active ? 'Убрать из избранного' : 'В избранное';
+                } else if (d.message && d.message.includes('Войдите')) {
+                    location.href = '/Account/Login';
+                } else if (d.message) {
+                    alert(d.message);
+                }
+            });
         }
     </script>
 </body>

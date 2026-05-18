@@ -1,0 +1,9 @@
+@model List<cursovaia2.ModelsDb.RoleDb>
+@{ ViewData["Title"] = "Роли"; }
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Название</th></tr></thead>
+        <tbody>@foreach (var r in Model) { <tr><td>@r.Id</td><td>@r.Name</td></tr> }</tbody>
+    </table>
+    <p class="text-muted">Роли создаются при первом запуске /Test/AddTestData (admin, user).</p>
+</div>

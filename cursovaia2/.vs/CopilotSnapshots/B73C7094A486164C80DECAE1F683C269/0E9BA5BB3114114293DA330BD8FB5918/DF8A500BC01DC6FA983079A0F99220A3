@@ -1,0 +1,163 @@
+﻿@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>✨ Создать аккаунт</h2>
+        <p class="subtitle">Присоединитесь к нам и начните делать покупки</p>
+
+        @if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @ViewBag.Error
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form method="post" action="/Account/Register" class="auth-form">
+            <div class="form-group">
+                <label for="email">Email адрес</label>
+                <input type="email" class="form-control" id="email" name="email" required 
+                       placeholder="example@mail.com">
+                <small class="error-message" style="display: none;">Пожалуйста, введите корректный email</small>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">Имя (опционально)</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" 
+                       placeholder="Ваше имя">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Фамилия (опционально)</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" 
+                       placeholder="Ваша фамилия">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" class="form-control" id="password" name="password" required 
+                       minlength="6" placeholder="Введите пароль">
+                <small class="text-muted d-block mt-1">💡 Минимум 6 символов</small>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordConfirm">Подтвердите пароль</label>
+                <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" required 
+                       minlength="6" placeholder="Повторите пароль">
+                <small class="error-message" style="display: none;">Пароли не совпадают</small>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label class="form-check-label" for="agreeTerms">
+                    Я согласен с <a href="#" style="color: #2563eb;">условиями использования</a>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Зарегистрироваться</button>
+        </form>
+
+        <div class="divider">или</div>
+
+        <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-outline-secondary" style="padding: 10px; border-radius: 8px;">
+                <i class="fab fa-google"></i> Зарегистрироваться через Google
+            </button>
+        </div>
+
+        <div class="link-text">
+            <p>Уже есть аккаунт? <a href="/Account/Login">Войдите</a></p>
+            <p><a href="/">← Вернуться на главную</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Стили уже определены в site.css */
+</style>
+
+<script>
+    // Валидация email
+    document.getElementById('email')?.addEventListener('blur', function() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const errorMsg = this.parentElement.querySelector('.error-message');
+        if (!emailRegex.test(this.value) && this.value) {
+            errorMsg.style.display = 'block';
+        } else {
+            errorMsg.style.display = 'none';
+        }
+    });
+
+    // Валидация совпадения паролей
+    document.getElementById('passwordConfirm')?.addEventListener('blur', function() {
+        const password = document.getElementById('password').value;
+        const errorMsg = this.parentElement.querySelector('.error-message');
+        if (this.value !== password && this.value) {
+            errorMsg.style.display = 'block';
+        } else {
+            errorMsg.style.display = 'none';
+        }
+    });
+
+    // Проверка перед отправкой
+    document.querySelector('.auth-form')?.addEventListener('submit', function(e) {
+        const password = document.getElementById('password').value;
+        const passwordConfirm = document.getElementById('passwordConfirm').value;
+        const agreeTerms = document.getElementById('agreeTerms').checked;
+
+        if (password !== passwordConfirm) {
+            e.preventDefault();
+            alert('Пароли не совпадают!');
+            return false;
+        }
+
+        if (!agreeTerms) {
+            e.preventDefault();
+            alert('Вы должны согласиться с условиями использования');
+            return false;
+        }
+    });
+</script>        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 12px;
+        margin-top: 2rem;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        padding: 0.75rem;
+    }
+
+    .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .alert {
+        border-radius: 8px;
+        border: none;
+    }
+</style>

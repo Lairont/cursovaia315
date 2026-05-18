@@ -1,0 +1,63 @@
+@model cursovaia2.Models.ProfileViewModel
+@{
+    ViewData["Title"] = "Профиль";
+}
+
+<div class="auth-container">
+    <div class="auth-card auth-card--wide">
+        <h2>Мой профиль</h2>
+        <p class="subtitle">Данные вашего аккаунта</p>
+
+        <dl class="profile-info">
+            <dt>Email</dt>
+            <dd>@Model.Email</dd>
+
+            <dt>Имя</dt>
+            <dd>@Model.Name</dd>
+
+            <dt>Телефон</dt>
+            <dd>@(string.IsNullOrWhiteSpace(Model.Phone) ? "—" : Model.Phone)</dd>
+
+            <dt>Роль</dt>
+            <dd>@Model.RoleName</dd>
+
+            <dt>Дата регистрации</dt>
+            <dd>@Model.RegisteredAt.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</dd>
+
+            <dt>Бонусный баланс</dt>
+            <dd>@Model.BonusBalance.ToString("N0") ₽</dd>
+        </dl>
+
+        <div class="profile-actions">
+            <a href="/Checkout/Orders" class="btn btn-primary">Мои заказы</a>
+            <a href="/Wishlist" class="btn btn-secondary">Избранное</a>
+            <a href="/Account/Logout" class="btn btn-outline">Выйти</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .profile-info {
+        margin: 1.5rem 0;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 0.75rem 1rem;
+    }
+    .profile-info dt {
+        font-weight: 600;
+        color: #64748b;
+        margin: 0;
+    }
+    .profile-info dd {
+        margin: 0;
+        color: #1e293b;
+    }
+    .profile-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e2e8f0;
+    }
+</style>

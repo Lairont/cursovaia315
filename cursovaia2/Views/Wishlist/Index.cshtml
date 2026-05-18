@@ -1,0 +1,52 @@
+@using cursovaia2.Models
+@model List<cursovaia2.ModelsDb.WishlistDb>
+@{
+    ViewData["Title"] = "Избранное";
+    var prices = ViewBag.Prices as Dictionary<int, ProductPriceInfo> ?? new();
+}
+
+<h1>Избранное</h1>
+
+@if (Model.Any())
+{
+    <div class="products-grid">
+        @foreach (var w in Model)
+        {
+            if (w.Product == null) continue;
+            var price = prices.GetValueOrDefault(w.Product.Id, new ProductPriceInfo { OriginalPrice = w.Product.Price, FinalPrice = w.Product.Price });
+            <article class="product-card">
+                <div class="product-card__image-wrap">
+                    <a href="/Product/Detail/@w.Product.Id" class="product-card__image">
+                        @{ ViewData["CssClass"] = "product-card__img"; }
+                        @await Html.PartialAsync("_ProductThumbnail", w.Product)
+                    </a>
+                    <button type="button" class="btn-wishlist btn-wishlist--active" title="Убрать из избранного"
+                            onclick="toggleWishlist(@w.Product.Id, this)">♥</button>
+                </div>
+                <div class="product-card__body">
+                    <h3 class="product-card__title"><a href="/Product/Detail/@w.Product.Id">@w.Product.Name</a></h3>
+                    @await Html.PartialAsync("_ProductPrice", price)
+                    <div class="product-card__actions">
+                        <a href="/Product/Detail/@w.Product.Id" class="btn btn-secondary btn-sm">Подробнее</a>
+                        <button type="button" class="btn btn-success btn-sm" onclick="addToCart(@w.Product.Id)">В корзину</button>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+}
+else
+{
+    <div class="empty-state">
+        <h2>В избранном пока ничего нет</h2>
+        <p>Нажмите ♡ на карточке товара в каталоге, чтобы сохранить его сюда.</p>
+        <a href="/Product/Catalog" class="btn btn-primary">Перейти в каталог</a>
+    </div>
+}
+
+<script>
+function addToCart(id) {
+    fetch('/Cart/AddToCart', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({productId:id,quantity:1}) })
+    .then(r=>r.json()).then(d=>{ if(d.success) { alert(d.message); if(typeof updateCartBadge==='function') updateCartBadge(); } });
+}
+</script>

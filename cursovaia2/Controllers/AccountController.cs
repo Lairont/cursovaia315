@@ -1,8 +1,9 @@
 using cursovaia2.Data;
+using cursovaia2.Models;
 using cursovaia2.ModelsDb;
+using cursovaia2.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace cursovaia2.Controllers
 {
@@ -15,17 +16,18 @@ namespace cursovaia2.Controllers
             _context = context;
         }
 
-        // GET: Account/Login
         public IActionResult Login()
         {
+            ViewData["FullWidth"] = true;
             return View();
         }
 
-        // POST: Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(string email, string password)
         {
+            ViewData["FullWidth"] = true;
+
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 ViewBag.Error = "Email и пароль обязательны";
@@ -34,13 +36,16 @@ namespace cursovaia2.Controllers
 
             try
             {
-                var user = _context.Users?.FirstOrDefault(u => u.Email == email);
+                var user = await _context.Users
+                    .Include(u => u.Role)
+                    .FirstOrDefaultAsync(u => u.Email == email);
 
-                if (user != null && VerifyPassword(password, user.PasswordHash))
+                if (user != null && PasswordHasher.Verify(password, user.PasswordHash))
                 {
-                    // Сохраняем информацию пользователя в сессию
-                    HttpContext.Session.SetInt32("UserId", user.Id);
-                    HttpContext.Session.SetString("Email", user.Email);
+                    AuthSession.SetUser(HttpContext.Session, user);
+
+                    if (AuthSession.IsAdmin(HttpContext.Session))
+                        return RedirectToAction("Index", "Admin");
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -55,17 +60,18 @@ namespace cursovaia2.Controllers
             }
         }
 
-        // GET: Account/Register
         public IActionResult Register()
         {
+            ViewData["FullWidth"] = true;
             return View();
         }
 
-        // POST: Account/Register
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(string email, string password, string passwordConfirm)
         {
+            ViewData["FullWidth"] = true;
+
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 ViewBag.Error = "Все поля обязательны";
@@ -80,29 +86,42 @@ namespace cursovaia2.Controllers
 
             try
             {
-                // Проверяем, существует ли уже пользователь с таким email
-                var existingUser = _context.Users?.FirstOrDefault(u => u.Email == email);
-                if (existingUser != null)
+                if (await _context.Users.AnyAsync(u => u.Email == email))
                 {
                     ViewBag.Error = "Пользователь с таким email уже существует";
                     return View();
                 }
 
-                // Создаем нового пользователя
+                var userRole = await _context.Roles.FirstOrDefaultAsync(r => r.Name == AuthSession.UserRoleName);
+                if (userRole == null)
+                {
+                    userRole = new RoleDb { Name = AuthSession.UserRoleName };
+                    _context.Roles.Add(userRole);
+                    await _context.SaveChangesAsync();
+                }
+
                 var newUser = new UserDb
                 {
-                    Email = email,
-                    PasswordHash = HashPassword(password),
+                    Email = email.Trim(),
+                    PasswordHash = PasswordHasher.Hash(password),
+                    RoleId = userRole.Id,
                     Status = "active",
                     CreatedAt = DateTime.UtcNow
                 };
 
-                _context.Users?.Add(newUser);
+                _context.Users.Add(newUser);
                 await _context.SaveChangesAsync();
 
-                // Автоматический вход после регистрации
-                HttpContext.Session.SetInt32("UserId", newUser.Id);
-                HttpContext.Session.SetString("Email", newUser.Email);
+                _context.Customers.Add(new CustomerDb
+                {
+                    UserId = newUser.Id,
+                    Name = email.Split('@')[0],
+                    BonusBalance = 0
+                });
+                await _context.SaveChangesAsync();
+
+                newUser.Role = userRole;
+                AuthSession.SetUser(HttpContext.Session, newUser);
 
                 return RedirectToAction("Index", "Home");
             }
@@ -113,28 +132,41 @@ namespace cursovaia2.Controllers
             }
         }
 
-        // GET: Account/Logout
+        public IActionResult Profile()
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (!userId.HasValue)
+                return RedirectToAction(nameof(Login));
+
+            var user = _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefault(u => u.Id == userId.Value);
+
+            if (user == null)
+            {
+                HttpContext.Session.Clear();
+                return RedirectToAction(nameof(Login));
+            }
+
+            var customer = _context.Customers.FirstOrDefault(c => c.UserId == user.Id);
+
+            var model = new ProfileViewModel
+            {
+                Email = user.Email,
+                Name = customer?.Name ?? user.Email,
+                Phone = customer?.Phone,
+                RoleName = user.Role?.Name ?? "user",
+                RegisteredAt = user.CreatedAt,
+                BonusBalance = customer?.BonusBalance ?? 0
+            };
+
+            return View(model);
+        }
+
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
-        }
-
-        // Хеширование пароля
-        private string HashPassword(string password)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashedBytes);
-            }
-        }
-
-        // Проверка пароля
-        private bool VerifyPassword(string password, string hash)
-        {
-            var hashOfInput = HashPassword(password);
-            return hashOfInput == hash;
         }
     }
 }

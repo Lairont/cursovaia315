@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Вход";
+}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2>🔐 Вход в аккаунт</h2>
+        <p class="subtitle">Войдите в ваш профиль, чтобы продолжить покупки</p>
+
+        @if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @ViewBag.Error
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <form method="post" action="/Account/Login" class="auth-form">
+            <div class="form-group">
+                <label for="email">Email адрес</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="example@mail.com">
+                <small class="error-message" style="display: none;">Пожалуйста, введите корректный email</small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" class="form-control" id="password" name="password" required placeholder="Введите пароль">
+                <small class="error-message" style="display: none;">Пароль должен быть не менее 6 символов</small>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe">
+                <label class="form-check-label" for="rememberMe">
+                    Запомнить меня
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Войти</button>
+        </form>
+
+        <div class="divider">или</div>
+
+        <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-outline-secondary" style="padding: 10px; border-radius: 8px;">
+                <i class="fab fa-google"></i> Войти через Google
+            </button>
+        </div>
+
+        <div class="link-text">
+            <p>Нет аккаунта? <a href="/Account/Register">Зарегистрируйтесь</a></p>
+            <p><a href="/">← Вернуться на главную</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Стили уже определены в site.css */
+</style>
+
+<script>
+    // Валидация формы
+    function validateEmail(email) {
+        var emailPattern = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+        return emailPattern.test(email);
+    }
+
+    document.getElementById('email')?.addEventListener('blur', function() {
+        if (!validateEmail(this.value) && this.value) {
+            this.parentElement.querySelector('.error-message').style.display = 'block';
+        } else {
+            this.parentElement.querySelector('.error-message').style.display = 'none';
+        }
+    });
+
+    document.getElementById('password')?.addEventListener('blur', function() {
+        if (this.value.length < 6 && this.value) {
+            this.parentElement.querySelector('.error-message').style.display = 'block';
+        } else {
+            this.parentElement.querySelector('.error-message').style.display = 'none';
+        }
+    });
+</script>
+        border-radius: 8px;
+        border: none;
+    }
+</style>

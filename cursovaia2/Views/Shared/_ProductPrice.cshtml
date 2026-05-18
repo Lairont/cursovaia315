@@ -1,0 +1,16 @@
+@using cursovaia2.Models
+@model ProductPriceInfo
+
+@if (Model.HasDiscount)
+{
+    <span class="product-price product-price--old">@Model.OriginalPrice.ToString("N0") ₽</span>
+    <span class="product-price product-price--sale">@Model.FinalPrice.ToString("N0") ₽</span>
+    @if (Model.DiscountPercent.HasValue)
+    {
+        <span class="product-discount-badge">−@Model.DiscountPercent%</span>
+    }
+}
+else
+{
+    <span class="product-price">@Model.FinalPrice.ToString("N0") ₽</span>
+}

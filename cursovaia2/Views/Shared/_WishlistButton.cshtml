@@ -1,0 +1,12 @@
+@{
+    var productId = (int)ViewData["ProductId"]!;
+    var inWishlist = ViewData["InWishlist"] as bool? ?? false;
+}
+
+<button type="button"
+        class="btn-wishlist @(inWishlist ? "btn-wishlist--active" : "")"
+        data-product-id="@productId"
+        title="@(inWishlist ? "Убрать из избранного" : "В избранное")"
+        onclick="toggleWishlist(@productId, this)">
+    @(inWishlist ? "♥" : "♡")
+</button>

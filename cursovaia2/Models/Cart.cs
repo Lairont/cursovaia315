@@ -47,6 +47,17 @@ namespace cursovaia2.Models
             }
         }
 
+        public void UpdateQuantityByProductId(int productId, int quantity)
+        {
+            var item = Items.FirstOrDefault(x => x.ProductId == productId);
+            if (item == null) return;
+
+            if (quantity <= 0)
+                Items.Remove(item);
+            else
+                item.Quantity = quantity;
+        }
+
         public void Clear()
         {
             Items.Clear();

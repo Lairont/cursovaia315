@@ -1,0 +1,18 @@
+@model List<cursovaia2.ModelsDb.PaymentMethodDb>
+@{ ViewData["Title"] = "Способы оплаты"; }
+<div class="admin-panel">
+    <form method="post" action="/Admin/SavePaymentMethod" class="admin-form">
+        @Html.AntiForgeryToken()
+        <div><label>Название</label><input type="text" name="name" required></div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+</div>
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Название</th><th></th></tr></thead>
+        <tbody>@foreach (var m in Model) {
+            <tr><td>@m.Id</td><td>@m.Name</td>
+            <td><form method="post" action="/Admin/DeletePaymentMethod" onsubmit="return confirm('?')">@Html.AntiForgeryToken()<input type="hidden" name="id" value="@m.Id"><button class="btn-admin btn-admin--danger">×</button></form></td></tr>
+        }</tbody>
+    </table>
+</div>

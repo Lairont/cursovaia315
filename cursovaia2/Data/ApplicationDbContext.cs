@@ -51,6 +51,9 @@ namespace cursovaia2.Data
         public DbSet<ReviewDb> Reviews { get; set; }
         public DbSet<WishlistDb> Wishlists { get; set; }
 
+        // Order status history
+        public DbSet<OrderStatusHistoryDb> OrderStatusHistories { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -159,6 +162,18 @@ namespace cursovaia2.Data
                 .HasOne(ci => ci.Cart)
                 .WithMany(c => c.Items)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderStatusHistoryDb>()
+                .HasOne(h => h.Order)
+                .WithMany()
+                .HasForeignKey(h => h.OrderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<OrderStatusHistoryDb>()
+                .HasOne(h => h.ChangedByUser)
+                .WithMany()
+                .HasForeignKey(h => h.ChangedByUserId)
+                .OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

@@ -1,0 +1,60 @@
+@model List<cursovaia2.ModelsDb.CategoryDb>
+@{
+    ViewData["Title"] = "Категории";
+    var categories = Model;
+}
+
+<div class="admin-panel">
+    <h3>Добавить категорию</h3>
+    <form method="post" action="/Admin/SaveCategory" class="admin-form">
+        @Html.AntiForgeryToken()
+        <div><label>Название</label><input type="text" name="name" required></div>
+        <div><label>Родитель</label>
+            <select name="parentId">
+                <option value="">— нет —</option>
+                @foreach (var c in categories)
+                {
+                    <option value="@c.Id">@c.Name</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+</div>
+
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>ID</th><th>Название</th><th>Родитель</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var item in categories)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>
+                    <form method="post" action="/Admin/SaveCategory" class="admin-form" style="grid-template-columns:1fr auto;">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@item.Id">
+                        <input type="text" name="name" value="@item.Name" required>
+                        <select name="parentId">
+                            <option value="">—</option>
+                            @foreach (var c in categories.Where(x => x.Id != item.Id))
+                            {
+                                <option value="@c.Id" selected="@(item.ParentId == c.Id)">@c.Name</option>
+                            }
+                        </select>
+                        <button type="submit" class="btn-admin btn-admin--primary">Сохранить</button>
+                    </form>
+                </td>
+                <td>@(item.Parent?.Name ?? "—")</td>
+                <td>
+                    <form method="post" action="/Admin/DeleteCategory" onsubmit="return confirm('Удалить?')">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@item.Id">
+                        <button type="submit" class="btn-admin btn-admin--danger">Удалить</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

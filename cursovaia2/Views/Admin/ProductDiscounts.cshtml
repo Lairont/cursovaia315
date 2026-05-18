@@ -1,0 +1,21 @@
+@model List<cursovaia2.ModelsDb.ProductDiscountDb>
+@{ ViewData["Title"] = "Скидки на товары"; }
+@if (TempData["Success"] != null) { <div class="alert alert-success">@TempData["Success"]</div> }
+@if (TempData["Error"] != null) { <div class="alert alert-danger">@TempData["Error"]</div> }
+<div class="admin-panel">
+    <form method="post" action="/Admin/SaveProductDiscount" class="admin-form">
+        @Html.AntiForgeryToken()
+        <div><label>Товар</label><select name="productId" asp-items="ViewBag.Products" required></select></div>
+        <div><label>Скидка</label><select name="discountId" asp-items="ViewBag.Discounts" required></select></div>
+        <button type="submit" class="btn btn-primary">Связать</button>
+    </form>
+</div>
+<div class="admin-panel">
+    <table class="admin-table">
+        <thead><tr><th>Товар</th><th>Скидка</th><th></th></tr></thead>
+        <tbody>@foreach (var pd in Model) {
+            <tr><td>@(pd.Product?.Name)</td><td>@(pd.Discount?.Name)</td>
+            <td><form method="post" action="/Admin/DeleteProductDiscount">@Html.AntiForgeryToken()<input type="hidden" name="id" value="@pd.Id"><button class="btn-admin btn-admin--danger">×</button></form></td></tr>
+        }</tbody>
+    </table>
+</div>
